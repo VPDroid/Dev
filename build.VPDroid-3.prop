@@ -22,7 +22,7 @@ ro.build.version.all_codenames=REL
 # ro.build.version.release=6.0.1
 # ro.build.version.security_patch=2016-08-05
 ro.build.version.base_os=
-# ro.build.date=2019年 08月 14日 星期三 11:00:14 CST
+# ro.build.date=Wednesday, August 14, 2019 11:00:14 CST
 # ro.build.date.utc=1565751614
 # ro.build.type=userdebug
 # ro.build.user=jl
@@ -202,12 +202,12 @@ ro.cell.lo.altitude=-12.7
 ro.cell.lo.bearing=344.61
 
 gsm.sim.operator.numeric=46001
-gsm.sim.operator.alpha=中国联通
+gsm.sim.operator.alpha=China Unicom
 gsm.sim.operator.iso-country=cn
 gsm.operator.numeric=46001
 gsm.current.phone-type=1
 gsm.operator.iso-country=cn
-gsm.operator.alpha=中国联通
+gsm.operator.alpha=China Unicom
 
 ro.cell.gsm.lac=57630
 ro.cell.gsm.cid=144508523
