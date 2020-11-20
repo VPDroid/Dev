@@ -16,9 +16,9 @@ Since VPDroid is a os-level code with a large amount of code, we will upload the
 The codes we created are as follows, which are based on the Android Open Source Project (AOSP) (https://android.googlesource.com/platform/manifest) and Cells (https://cells-source.cs.columbia.edu/ ).
 
 ## cells
-  cells/: Container Manager Daemons
+  cells/: VP Manager Daemons
     
-  cellsservice/: Container Manager
+  cellsservice/: VP Manager
 
   cellsapp/: Switch Applications
 
@@ -27,11 +27,11 @@ The codes we created are as follows, which are based on the Android Open Source 
 ## system
   core/adb/: adb Mutex virtualization
 
-  core/init/: Container Startup
+  core/init/: VP Startup
 
-  core/rootdir/init.cells.rc: Container's init.rc
+  core/rootdir/init.cells.rc: VP's init.rc
 
-  core/rootdir/cells/: Additional configuration files for the container
+  core/rootdir/cells/: Additional configuration files for the VP
 
   core/sdcard/: sdcard virtualization
 
@@ -76,15 +76,15 @@ JDK version：openJDK version 9
 
 source build/envsetup.sh
 
-lunch xx
+lunch 
 
 make -j4
 
 
 # Benchmarks and Samples:
 
-##Benchmarks 
- Linpack (v1.1) for CPU; 
+## Benchmarks 
+Linpack (v1.1) for CPU; 
 Quadrant advanced edition (v2.1.1) for 2D graphics and file I/O; 
 3DMark (v2.0.4646) for 3D graphics;
 SunSpider (v1.0.2) for web browsing;
