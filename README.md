@@ -66,7 +66,7 @@ The ways to download source code:  https://source.android.com/setup/develop/repo
 
 # System Prerequisites
 
-Operating System: 
+Operating System: Ubuntu 20.04 LTS
 
 JDK version：openJDK version 9
 
