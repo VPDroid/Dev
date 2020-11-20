@@ -2,10 +2,10 @@
 
 We develop a lightweight Android OS-level virtualization architecture, VPDroid, to assist apps’ account security testing. With VPDroid, security analysts are able to configure different device attributes according to a target phone’s profiles and then boot up a virtual phone (VP) environment that closely approximates the target device. To deceive the cloned apps into thinking the smartphone is not changed, VPDroid has to meet two requirements (RQ1 & RQ2):
 
--RQ1: the VP always gets direct access to hardware devices; this design provides a close-to-native virtual
+- RQ1: the VP always gets direct access to hardware devices; this design provides a close-to-native virtual
 environment with high performance.
 
--RQ2: user-mode apps in the VP are imperceptible to the change of device; this requires our virtualization and
+- RQ2: user-mode apps in the VP are imperceptible to the change of device; this requires our virtualization and
 device-attribute customization functions are invisible to user-mode apps running in the VP.
 
 VPDroid is built on top of Cells, because its foreground VP design meets RQ1. However, Cells fails to meet RQ2: it is not designed to edit device attributes, and its user-level device virtualization modifies the VP’s application framework layer, which can be detected by VP’s apps. Besides, Cells’s kernel-level device virtualization to many hardware devices are not compatible with Android 6.0 and later versions any more. We improve Cells significantly to achieve our requirements on mainstream Android versions.
@@ -17,22 +17,22 @@ Since VPDroid is a os-level code with a large amount of code, we will upload the
 The codes we created are as follows, which are based on the Android Open Source Project (AOSP) (https://android.googlesource.com/platform/manifest) and Cells (https://cells-source.cs.columbia.edu/ ).
 
 ## cells
-  cells/: VP Manager Daemons
+  cells/: VP manager daemons
     
-  cellsservice/: VP Manager
+  cellsservice/: VP manager
 
-  cellsapp/: Switch Applications
+  cellsapp/: switch applications
 
   busybox/: Linux tools
 
 ## system
-  core/adb/: adb Mutex virtualization
+  core/adb/: adb mutex virtualization
 
-  core/init/: VP Startup
+  core/init/: VP startup
 
   core/rootdir/init.cells.rc: VP's init.rc
 
-  core/rootdir/cells/: Additional configuration files for the VP
+  core/rootdir/cells/: additional configuration files for the VP
 
   core/sdcard/: sdcard virtualization
 
