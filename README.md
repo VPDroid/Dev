@@ -61,6 +61,9 @@ The codes we created are as follows, which are based on the Android Open Source 
 
   base/core/java/android/app/CellsPrivateServiceManager.java: cellsservice java service
 ## Configuration file
+  share-services: Compile system configuration file
+  build.VPDroid.prop/ build.VPDroid-1.prop/ build.VPDroid-2.prop/ build.VPDroid-3.prop:  Custom configuration file for update Customized
+ environment
 
 # basic code 
 
