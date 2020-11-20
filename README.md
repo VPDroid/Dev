@@ -59,17 +59,25 @@ The codes we created are as follows, which are based on the Android Open Source 
 
   base/core/java/android/app/CellsPrivateServiceManager.java: cellsservice java service
 # basic code 
-The ways to download source code:  https://source.android.com/setup/develop/repo?hl=zh-cn
 
-The link to the Android10.0 source code is:  
+The Android10.0 source code is:  android-10.0.0_r33
+
+The ways to download source code:  https://source.android.com/setup/develop/repo?hl=zh-cn
 
 # System Prerequisites
 
 Operating System: 
 
-JDK version：
+JDK version：openJDK version 9
 
 # Compile command
+
+source build/envsetup.sh
+
+lunch xx
+
+make -j4
+
 
 # Benchmarks and Samples:
 
