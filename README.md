@@ -1,8 +1,10 @@
 # Android 10 VPDroid
 
 We develop a lightweight Android OS-level virtualization architecture, VPDroid, to assist apps’ account security testing. With VPDroid, security analysts are able to configure different device attributes according to a target phone’s profiles and then boot up a virtual phone (VP) environment that closely approximates the target device. To deceive the cloned apps into thinking the smartphone is not changed, VPDroid has to meet two requirements (RQ1 & RQ2):
+
 -RQ1: the VP always gets direct access to hardware devices; this design provides a close-to-native virtual
 environment with high performance.
+
 -RQ2: user-mode apps in the VP are imperceptible to the change of device; this requires our virtualization and
 device-attribute customization functions are invisible to user-mode apps running in the VP.
 
