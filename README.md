@@ -74,7 +74,7 @@ JDK version：
 # Benchmarks and Samples:
 
 ##Benchmarks 
- Linpack (v1.1) for CPU; 
+ Linpack (v1.1) for CPU; 
 Quadrant advanced edition (v2.1.1) for 2D graphics and file I/O; 
 3DMark (v2.0.4646) for 3D graphics;
 SunSpider (v1.0.2) for web browsing;
