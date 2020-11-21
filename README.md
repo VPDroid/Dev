@@ -10,11 +10,15 @@ device-attribute customization functions are invisible to user-mode apps running
 
 VPDroid is built on top of Cells, because its foreground VP design meets RQ1. However, Cells fails to meet RQ2: it is not designed to edit device attributes, and its user-level device virtualization modifies the VP’s application framework layer, which can be detected by VP’s apps. Besides, Cells’s kernel-level device virtualization to many hardware devices are not compatible with Android 6.0 and later versions any more. We improve Cells significantly to achieve our requirements on mainstream Android versions.
 
+# Overview of VPDroid's virtualization architecture.
+
+ ![image](https://github.com/VPDroid/Dev/blob/main/VPDroid-Architecture-new.pdf)
+ 
+The grey boxes represent Cells's modules reused by VPDroid.
+
 # Code introduction
 
 Since VPDroid is a os-level code with a large amount of code, we will upload the part of the code that belongs to “NEW USER-LEVEL DEVICE VIRTUALIZATION” and “CUSTOMIZE THE VP’S DEVICE ATTRIBUTES.”  The basic source code included in the VPDroid code is the android operation system source code that has not been modified; we will no longer upload it but will provide a download link.
-
-
 
 The codes we created are as follows, which are based on the Android Open Source Project (AOSP) (https://android.googlesource.com/platform/manifest) and Cells (https://cells-source.cs.columbia.edu/ ).
 
