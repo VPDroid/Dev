@@ -89,11 +89,11 @@ JDK version：openJDK version 9
 
 # Compile Command
 
-source build/envsetup.sh
+··source build/envsetup.sh
 
-lunch 
+··lunch 
 
-make -j4
+··make -j4
 
 
 # Benchmarks and Samples:
