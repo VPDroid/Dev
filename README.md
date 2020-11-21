@@ -12,12 +12,12 @@ VPDroid is built on top of Cells, because its foreground VP design meets RQ1. Ho
 
 # Overview of VPDroid's Virtualization Architecture
 
-<img src="https://github.com/VPDroid/Dev/blob/main/VPDroid-Architecture-new.png" width="600"  hight= "500"/>
+<img src="https://github.com/VPDroid/Dev/blob/main/VPDroid-Architecture-new.png" width="600"  hight= "300"/>
 
  
-The grey boxes represent Cells's modules reused by VPDroid. The white boxes represent functional modules updated by VPDroid. For updated code implementation, please see the section of the Code introduction below 
+The grey boxes represent Cells's modules reused by VPDroid. The white boxes represent functional modules updated by VPDroid. For updated code implementation, please see the section of the code introduction below 
 
-# Code introduction
+# Code Introduction
 
 Since VPDroid is a os-level code with a large amount of code, we will upload the part of the code that belongs to “NEW USER-LEVEL DEVICE VIRTUALIZATION” and “CUSTOMIZE THE VP’S DEVICE ATTRIBUTES.”  The basic source code included in the VPDroid code is the android operation system source code that has not been modified; we will no longer upload it but will provide a download link.
 
@@ -87,7 +87,7 @@ Operating System: Ubuntu 20.04 LTS
 
 JDK version：openJDK version 9
 
-# Compile command
+# Compile Command
 
 source build/envsetup.sh
 
