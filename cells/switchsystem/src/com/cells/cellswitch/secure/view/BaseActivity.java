@@ -65,24 +65,24 @@ public class BaseActivity extends Activity implements Wifip2pActionListener {
     private ServiceConnection mReceiveServiceConnection = new ServiceConnection() {
         @Override
         public void onServiceConnected(ComponentName name, IBinder service) {
-            //调用服务里面的方法进行绑定
+            //Call the method in the service to bind
             Wifip2pService.MyBinder receiveBinder;
             receiveBinder = (Wifip2pService.MyBinder) service;
             receiveBinder.init(BaseActivity.this);
         }
         @Override
         public void onServiceDisconnected(ComponentName name) {
-            //服务断开重新绑定
+            //Service disconnect and rebind
             bindService(mReceiveIntent, mReceiveServiceConnection, Context.BIND_AUTO_CREATE);
         }
     };
 
     private void initHost(){
-        //注册WifiP2pManager
+        //Register WifiP2pManager
         mWifiP2pManager = (WifiP2pManager) getSystemService(Context.WIFI_P2P_SERVICE);
         mChannel = mWifiP2pManager.initialize(this, getMainLooper(), this);
 
-        //注册广播
+        //Register to broadcast
         mWifip2pReceiver = new Wifip2pReceiver(mWifiP2pManager, mChannel, this);
         IntentFilter intentFilter = new IntentFilter();
         intentFilter.addAction(WifiP2pManager.WIFI_P2P_STATE_CHANGED_ACTION);
@@ -153,13 +153,13 @@ public class BaseActivity extends Activity implements Wifip2pActionListener {
         mWifiP2pManager.discoverPeers(mChannel, new WifiP2pManager.ActionListener() {
             @Override
             public void onSuccess() {
-                Log.e(TAG, "搜索设备成功");
+                Log.e(TAG, "Search device successfully");
                 mSearchDeviceDialog.dismiss();
             }
 
             @Override
             public void onFailure(int reasonCode) {
-                Log.e(TAG, "搜索设备失败");
+                Log.e(TAG, "Failed to search for device");
                 mSearchDeviceDialog.dismiss();
             }
         });
@@ -167,7 +167,7 @@ public class BaseActivity extends Activity implements Wifip2pActionListener {
 
     @Override
     public void wifiP2pEnabled(boolean enabled) {
-        Log.e(TAG, "传输通道是否可用：" + enabled);
+        Log.e(TAG, "Whether the transmission channel is available：" + enabled);
     }
 
     @Override
@@ -177,13 +177,13 @@ public class BaseActivity extends Activity implements Wifip2pActionListener {
             mWifiP2pInfo = wifiP2pInfo;
             Button btn_vm = (Button) BaseActivity.this.findViewById(R.id.btn_vm);
             btn_vm.setTextColor(BaseActivity.this.getResources().getColor(R.color.green));
-            //Toast.makeText(BaseActivity.this, "连接成功", Toast.LENGTH_SHORT).show();
+            //Toast.makeText(BaseActivity.this, "connection succeeded", Toast.LENGTH_SHORT).show();
         }
     }
 
     @Override
     public void onDisconnection() {
-        Log.e(TAG, "连接断开");
+        Log.e(TAG, "Disconnect");
 
         Button btn_vm = (Button) BaseActivity.this.findViewById(R.id.btn_vm);
         btn_vm.setTextColor(BaseActivity.this.getResources().getColor(R.color.white));
@@ -194,7 +194,7 @@ public class BaseActivity extends Activity implements Wifip2pActionListener {
     @Override
     public void onDeviceInfo(WifiP2pDevice wifiP2pDevice) {
         mMyWifiP2pDevice = wifiP2pDevice;
-        Log.e(TAG, "当前的的设备名称" + wifiP2pDevice.deviceName);
+        Log.e(TAG, "Current device name" + wifiP2pDevice.deviceName);
     }
 
     private ArrayList<WifiP2pDevice> mListDevice = new ArrayList<>();
@@ -212,8 +212,8 @@ public class BaseActivity extends Activity implements Wifip2pActionListener {
                 continue;
 
             if (device.deviceName.startsWith("Android_cells") &&!mListDeviceName.contains(device.deviceName) && !mListDevice.contains(device)) {
-                Log.e(TAG, "连接的设备信息：" + device.deviceName + "--------" + device.deviceAddress);
-                mListDeviceName.add("设备：" + device.deviceName + "----" + device.deviceAddress);
+                Log.e(TAG, "Connected device information：" + device.deviceName + "--------" + device.deviceAddress);
+                mListDeviceName.add("equipment：" + device.deviceName + "----" + device.deviceAddress);
                 mListDevice.add(device);
             }
         }
@@ -228,16 +228,16 @@ public class BaseActivity extends Activity implements Wifip2pActionListener {
         mWifiP2pManager.createGroup(mChannel, new WifiP2pManager.ActionListener() {
             @Override
             public void onSuccess() {
-                Log.e(TAG, "创建群组成功");
-                //Toast.makeText(BaseActivity.this, "创建群组成功", Toast.LENGTH_SHORT).show();
+                Log.e(TAG, "Group created successfully");
+                //Toast.makeText(BaseActivity.this, "Group created successfully", Toast.LENGTH_SHORT).show();
                 /*Button btn_group_vm = (Button) BaseActivity.this.findViewById(R.id.btn_group_vm);
                 btn_group_vm.setTextColor(BaseActivity.this.getResources().getColor(R.color.green));*/
             }
 
             @Override
             public void onFailure(int reason) {
-                Log.e(TAG, "创建群组失败: " + reason);
-                //Toast.makeText(BaseActivity.this, "创建群组失败,请移除已有的组群或者连接同一WIFI重试", Toast.LENGTH_SHORT).show();
+                Log.e(TAG, "Failed to create group: " + reason);
+                //Toast.makeText(BaseActivity.this, "Failed to create a group, please remove the existing group or connect to the same WIFI and try again", Toast.LENGTH_SHORT).show();
                 /*Button btn_group_vm = (Button) BaseActivity.this.findViewById(R.id.btn_group_vm);
                 btn_group_vm.setTextColor(BaseActivity.this.getResources().getColor(R.color.white));*/
             }
@@ -248,15 +248,15 @@ public class BaseActivity extends Activity implements Wifip2pActionListener {
         mWifiP2pManager.removeGroup(mChannel, new WifiP2pManager.ActionListener() {
             @Override
             public void onSuccess() {
-                Log.e(TAG, "移除组群成功");
-                //Toast.makeText(BaseActivity.this, "移除组群成功", Toast.LENGTH_SHORT).show();
+                Log.e(TAG, "Group removed successfully");
+                //Toast.makeText(BaseActivity.this, "Group removed successfully", Toast.LENGTH_SHORT).show();
                 /*Button btn_group_vm = (Button) BaseActivity.this.findViewById(R.id.btn_group_vm);
                 btn_group_vm.setTextColor(BaseActivity.this.getResources().getColor(R.color.white));*/
             }
             @Override
             public void onFailure(int reason) {
-                Log.e(TAG, "移除组群失败");
-                //Toast.makeText(BaseActivity.this, "移除组群失败,请创建组群重试", Toast.LENGTH_SHORT).show();
+                Log.e(TAG, "Failed to remove group");
+                //Toast.makeText(BaseActivity.this, "Failed to remove the group, please create a group and try again", Toast.LENGTH_SHORT).show();
             }
         });
     }
@@ -269,13 +269,13 @@ public class BaseActivity extends Activity implements Wifip2pActionListener {
             mWifiP2pManager.connect(mChannel, config, new WifiP2pManager.ActionListener() {
                 @Override
                 public void onSuccess() {
-                    Log.e(TAG, "连接成功");
+                    Log.e(TAG, "connection succeeded");
                 }
 
                 @Override
                 public void onFailure(int reason) {
-                    Log.e(TAG, "连接失败");
-                    //Toast.makeText(BaseActivity.this, "连接失败", Toast.LENGTH_SHORT).show();
+                    Log.e(TAG, "Connection failed");
+                    //Toast.makeText(BaseActivity.this, "Connection failed", Toast.LENGTH_SHORT).show();
                     Button btn_vm = (Button) BaseActivity.this.findViewById(R.id.btn_vm);
                     btn_vm.setTextColor(BaseActivity.this.getResources().getColor(R.color.white));
                 }
