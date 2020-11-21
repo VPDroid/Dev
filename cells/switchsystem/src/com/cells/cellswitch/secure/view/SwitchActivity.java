@@ -96,12 +96,12 @@ public class SwitchActivity extends BaseActivity {
 				}
 				case MSG_START_VM_TOAST_CODE:
 				{
-					Toast.makeText(SwitchActivity.this, "容器启动失败.", Toast.LENGTH_SHORT).show();
+					Toast.makeText(SwitchActivity.this, "Container failed to start.", Toast.LENGTH_SHORT).show();
 					break;
 				}
 				case MSG_UP_CODE_PACK:
 				{
-					Toast.makeText(SwitchActivity.this,"打包成功",Toast.LENGTH_SHORT).show();
+					Toast.makeText(SwitchActivity.this,"Packaged successfully",Toast.LENGTH_SHORT).show();
 					break;
 				}
 			}
@@ -272,7 +272,7 @@ public class SwitchActivity extends BaseActivity {
 						e.printStackTrace();
 					}
 					long ms = System.currentTimeMillis() - beginTime;
-					Log.e(TAG, "启动镜像消耗 - " + ms + "(ms).");
+					Log.e(TAG, "Boot image consumption- " + ms + "(ms).");
 
 					int count = 25;
 					while(SystemProperties.get("persist.sys.cell1.init").equals("0") && count > 0){
@@ -313,7 +313,7 @@ public class SwitchActivity extends BaseActivity {
 			e.printStackTrace();
 		}
 
-		Toast.makeText(SwitchActivity.this,"关闭成功",Toast.LENGTH_SHORT).show();
+		Toast.makeText(SwitchActivity.this,"Closed successfully",Toast.LENGTH_SHORT).show();
 	}
 
 	public void btnDown(View v){
@@ -325,11 +325,11 @@ public class SwitchActivity extends BaseActivity {
 		if (path != null) {
 			final File file = new File(path);
 			if (!file.exists()) {
-				Toast.makeText(SwitchActivity.this,"文件路径找不到",Toast.LENGTH_SHORT).show();
+				Toast.makeText(SwitchActivity.this,"File path not found",Toast.LENGTH_SHORT).show();
 				return;
 			}
 			if (mWifiP2pInfo == null) {
-				Toast.makeText(SwitchActivity.this,"没有连接",Toast.LENGTH_SHORT).show();
+				Toast.makeText(SwitchActivity.this,"no connection",Toast.LENGTH_SHORT).show();
 				return;
 			}
 			String md5 = Md5Util.getMd5(file);
@@ -345,7 +345,7 @@ public class SwitchActivity extends BaseActivity {
 			mWeiboDialog = null;
 		}
 
-		Toast.makeText(SwitchActivity.this,"打包成功",Toast.LENGTH_SHORT).show();
+		Toast.makeText(SwitchActivity.this,"Packaged successfully",Toast.LENGTH_SHORT).show();
 
 		mHandler.sendEmptyMessage(MSG_P2P_CODE);
 	}
@@ -356,7 +356,7 @@ public class SwitchActivity extends BaseActivity {
 			mWeiboDialog = null;
 		}
 
-		Toast.makeText(SwitchActivity.this,"没有连接",Toast.LENGTH_SHORT).show();
+		Toast.makeText(SwitchActivity.this,"no connection",Toast.LENGTH_SHORT).show();
 	}
 
 	public void up_send_err(){
@@ -365,7 +365,7 @@ public class SwitchActivity extends BaseActivity {
 			mWeiboDialog = null;
 		}
 
-		Toast.makeText(SwitchActivity.this,"发送失败",Toast.LENGTH_SHORT).show();
+		Toast.makeText(SwitchActivity.this,"Failed to send",Toast.LENGTH_SHORT).show();
 	}
 
 	public void up_send_succ(){
@@ -374,7 +374,7 @@ public class SwitchActivity extends BaseActivity {
 			mWeiboDialog = null;
 		}
 
-		Toast.makeText(SwitchActivity.this,"发送成功",Toast.LENGTH_SHORT).show();
+		Toast.makeText(SwitchActivity.this,"Sent successfully",Toast.LENGTH_SHORT).show();
 	}
 
 	public void btnUp(View v){
@@ -393,7 +393,7 @@ public class SwitchActivity extends BaseActivity {
 					e.printStackTrace();
 				}
 				long ms = System.currentTimeMillis() - beginTime;
-				Log.e(TAG, "打包镜像消耗 - " + ms + "(ms).");
+				Log.e(TAG, "Package image consumption - " + ms + "(ms).");
 				mHandler.sendEmptyMessage(MSG_UP_CODE_PACK);
 
 				if(ms < 1500){
