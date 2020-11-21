@@ -35,7 +35,7 @@ public class Wifip2pReceiver extends BroadcastReceiver {
 
     @Override
     public void onReceive(Context context, Intent intent) {
-        Log.e(TAG, "接收到广播： " + intent.getAction());
+        Log.e(TAG, "Broadcast received： " + intent.getAction());
 
         int state = intent.getIntExtra(WifiP2pManager.EXTRA_WIFI_STATE, -1);
         switch (intent.getAction()) {
