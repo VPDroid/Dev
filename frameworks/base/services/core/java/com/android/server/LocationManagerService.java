@@ -2692,7 +2692,17 @@ public class LocationManagerService extends ILocationManager.Stub {
                 String name = request.getProvider();
                 if (name == null) name = LocationManager.FUSED_PROVIDER;
                 LocationProvider provider = getLocationProviderLocked(name);
-                if (provider == null) return null;
+                if (provider == null) {
+                    if(SystemProperties.get("ro.boot.vm").equals("1")){
+                        Location location = new Location(name);
+                        location.setLatitude(Double.parseDouble(SystemProperties.get("ro.cell.lo.latitude","30.537568333333336")));
+                        location.setLongitude(Double.parseDouble(SystemProperties.get("ro.cell.lo.longitude","114.3504")));
+                        location.setAltitude(Double.parseDouble(SystemProperties.get("ro.cell.lo.altitude","-12.7")));
+                        location.setBearing(Float.parseFloat(SystemProperties.get("ro.cell.lo.bearing","344.61")));
+                        return location;
+                    }
+                    return null;
+                }
 
                 // only the current user or location providers may get location this way
                 if (!isCurrentProfileLocked(UserHandle.getUserId(uid)) && !isProviderPackage(
@@ -2713,6 +2723,14 @@ public class LocationManagerService extends ILocationManager.Stub {
                     location = mLastLocation.get(name);
                 }
                 if (location == null) {
+                    if(SystemProperties.get("ro.boot.vm").equals("1")){
+                        location = new Location(name);
+                        location.setLatitude(Double.parseDouble(SystemProperties.get("ro.cell.lo.latitude","30.537568333333336")));
+                        location.setLongitude(Double.parseDouble(SystemProperties.get("ro.cell.lo.longitude","114.3504")));
+                        location.setAltitude(Double.parseDouble(SystemProperties.get("ro.cell.lo.altitude","-12.7")));
+                        location.setBearing(Float.parseFloat(SystemProperties.get("ro.cell.lo.bearing","344.61")));
+                        return location;
+                    }
                     return null;
                 }
 

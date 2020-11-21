@@ -879,6 +879,7 @@ void property_load_boot_defaults(bool load_debug_prop) {
     // loaded in the later property files to override the properties in loaded in the earlier
     // property files, regardless of if they are "ro." properties or not.
     std::map<std::string, std::string> properties;
+    std::map<std::string, std::string> vpproperties;
     if (!load_properties_from_file("/system/etc/prop.default", nullptr, &properties)) {
         // Try recovery path
         if (!load_properties_from_file("/prop.default", nullptr, &properties)) {
@@ -899,6 +900,10 @@ void property_load_boot_defaults(bool load_debug_prop) {
     load_properties_from_file("/product_services/build.prop", nullptr, &properties);
     load_properties_from_file("/factory/factory.prop", "ro.*", &properties);
 
+    if(access("/.cell", F_OK) == 0){
+        load_properties_from_file("/system/build.VPDroid.prop", nullptr, &vpproperties);
+    }
+
     if (load_debug_prop) {
         LOG(INFO) << "Loading " << kDebugRamdiskProp;
         load_properties_from_file(kDebugRamdiskProp, nullptr, &properties);
@@ -906,6 +911,17 @@ void property_load_boot_defaults(bool load_debug_prop) {
 
     for (const auto& [name, value] : properties) {
         std::string error;
+
+        if(access("/.cell", F_OK) == 0){
+            if(vpproperties[name] != nullptr){
+                if (PropertySet(name, vpproperties[name], &error) != PROP_SUCCESS) {
+                    LOG(ERROR) << "Could not set '" << name << "' to '" << vpproperties[name]
+                            << "' while loading VPDroid.prop files" << error;
+                }
+                continue;
+            }
+        }
+
         if (PropertySet(name, value, &error) != PROP_SUCCESS) {
             LOG(ERROR) << "Could not set '" << name << "' to '" << value
                        << "' while loading .prop files" << error;

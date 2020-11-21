@@ -651,11 +651,57 @@ Return<void> GnssCallback::gnssLocationCbImpl(const T& location) {
 }
 
 Return<void> GnssCallback::gnssLocationCb(const GnssLocation_V1_0& location) {
+    char value[PROPERTY_VALUE_MAX] = {0};
+    property_get("ro.boot.vm", value, "0");
+    if(strcmp(value, "1") == 0){
+        memset(value, 0, PROPERTY_VALUE_MAX);
+        property_get("ro.cell.lo.latitude", value, "30.537568333333336");
+        double latitude = strtod(value, NULL);
+        location.latitudeDegrees = static_cast<double>(latitude);
+
+        memset(value, 0, PROPERTY_VALUE_MAX);
+        property_get("ro.cell.lo.longitude", value, "114.3504");
+        double longitude = strtod(value, NULL);
+        location.longitudeDegrees = static_cast<double>(longitude);
+
+        memset(value, 0, PROPERTY_VALUE_MAX);
+        property_get("ro.cell.lo.altitude", value, "-12.7");
+        double altitude = strtod(value, NULL);
+        location.altitudeMeters = static_cast<double>(altitude);
+
+        memset(value, 0, PROPERTY_VALUE_MAX);
+        property_get("ro.cell.lo.bearing", value, "344.61");
+        float bearing = strtod(value, NULL);
+        location.bearingDegrees = static_cast<float>(bearing);
+    }
     return gnssLocationCbImpl<GnssLocation_V1_0>(location);
 }
 
 Return<void>
 GnssCallback::gnssLocationCb_2_0(const GnssLocation_V2_0& location) {
+    char value[PROPERTY_VALUE_MAX] = {0};
+    property_get("ro.boot.vm", value, "0");
+    if(strcmp(value, "1") == 0){
+        memset(value, 0, PROPERTY_VALUE_MAX);
+        property_get("ro.cell.lo.latitude", value, "30.537568333333336");
+        double latitude = strtod(value, NULL);
+        location.v1_0.latitudeDegrees = static_cast<double>(latitude);
+
+        memset(value, 0, PROPERTY_VALUE_MAX);
+        property_get("ro.cell.lo.longitude", value, "114.3504");
+        double longitude = strtod(value, NULL);
+        location.v1_0.longitudeDegrees = static_cast<double>(longitude);
+
+        memset(value, 0, PROPERTY_VALUE_MAX);
+        property_get("ro.cell.lo.altitude", value, "-12.7");
+        double altitude = strtod(value, NULL);
+        location.v1_0.altitudeMeters = static_cast<double>(altitude);
+
+        memset(value, 0, PROPERTY_VALUE_MAX);
+        property_get("ro.cell.lo.bearing", value, "344.61");
+        float bearing = strtod(value, NULL);
+        location.v1_0.bearingDegrees = static_cast<float>(bearing);
+    }
     return gnssLocationCbImpl<GnssLocation_V2_0>(location);
 }
 

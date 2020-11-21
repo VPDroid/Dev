@@ -30,6 +30,17 @@ static void init_vm_exit()
 	property_set("persist.sys.exit", "1");
 }
 
+static void config_vm_net_work(void)
+{
+	char value[PROPERTY_VALUE_MAX];
+	property_get("ro.cell.wlan.mac", value, "ac:c1:ee:57:64:9b");
+	char cmd[256] = {0};
+	snprintf(cmd, sizeof(cmd), "ifconfig wlan0 hw ether %s", value);
+	system(cmd);
+	ALOGD("%s ", cmd);
+
+};
+
 static int init_vm_name()
 {
 	int vmfd = open("/.name",O_RDONLY);
@@ -69,6 +80,7 @@ int main(int /*argc*/, char** /*argv*/)
 		int i = init_vm_name();
 		if(i > 0){
 			rnameveth(i);
+			config_vm_net_work();
 		}
 	}
 
