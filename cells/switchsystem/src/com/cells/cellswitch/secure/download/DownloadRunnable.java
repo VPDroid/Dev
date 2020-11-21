@@ -14,21 +14,21 @@ public class DownloadRunnable implements Runnable {
     private static final String TAG = "DownloadRunnable";
     private static final int STATUS_DOWNLOADING = 1;
     private static final int STATUS_STOP = 2;
-    //线程的状态
+    
     private int mStatus = STATUS_DOWNLOADING;
-    //文件下载的url
+    
     private String url;
-    //文件的名称
+    
     private String name;
-    //线程id
+    
     private int threadId;
-    //每个线程下载开始的位置
+    
     private long start;
-    //每个线程下载结束的位置
+   
     private long end;
-    //每个线程的下载进度
+   
     private long mProgress;
-    //文件的总大小 content-length
+   
     private long mCurrentLength;
     private DownloadCallback downloadCallback;
 
@@ -48,13 +48,13 @@ public class DownloadRunnable implements Runnable {
         RandomAccessFile randomAccessFile = null;
         try {
             Response response = OkHttpManager.getInstance().syncResponse(url, start, end);
-            Log.i(TAG, "fileName=" + name + " 每个线程负责下载文件大小contentLength=" + response.body().contentLength()
-                    + " 开始位置start=" + start + "结束位置end=" + end + " threadId=" + threadId);
+            Log.i(TAG, "fileName=" + name + " contentLength=" + response.body().contentLength()
+                    + " start=" + start + "end=" + end + " threadId=" + threadId);
             inputStream = response.body().byteStream();
-            //保存文件的路径
+        
             File file = new File(Environment.getExternalStorageDirectory().getAbsolutePath(), name);
             randomAccessFile = new RandomAccessFile(file, "rwd");
-            //seek从哪里开始
+          
             randomAccessFile.seek(start);
             int length;
             byte[] bytes = new byte[10 * 1024];
@@ -63,11 +63,11 @@ public class DownloadRunnable implements Runnable {
                     downloadCallback.onPause(length, mCurrentLength);
                     break;
                 }
-                //写入
+             
                 randomAccessFile.write(bytes, 0, length);
-                //保存下进度，做断点 todo
+             
                 mProgress = mProgress + length;
-                //实时去更新下进度条，将每次写入的length传出去
+             
                 downloadCallback.onProgress(length, mCurrentLength);
             }
             downloadCallback.onSuccess(file);
@@ -77,7 +77,7 @@ public class DownloadRunnable implements Runnable {
         } finally {
             Utils.close(inputStream);
             Utils.close(randomAccessFile);
-            //保存到数据库 怎么存？？ todo
+         
         }
     }
 
