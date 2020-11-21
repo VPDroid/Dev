@@ -49,7 +49,7 @@ public class Wifip2pService extends IntentService implements ReceiveSocket.Progr
     public void onCreate() {
         super.onCreate();
 
-        Log.e(TAG, "服务启动.");
+        Log.e(TAG, "Service start.");
     }
 
     @Override
@@ -62,7 +62,7 @@ public class Wifip2pService extends IntentService implements ReceiveSocket.Progr
 
             mReceiveSocket.clear();
 
-            Log.e(TAG, "传输完毕.");
+            Log.e(TAG, "Transmission completed.");
 
             try {
                 Thread.sleep(1000);
@@ -92,7 +92,7 @@ public class Wifip2pService extends IntentService implements ReceiveSocket.Progr
 
     @Override
     public void onFinished(File file) {
-        Log.e(TAG, "接收完成.");
+        Log.e(TAG, "Receive complete.");
 
         if (mReceiveProgress != null) {
             mReceiveProgress.dismiss();
@@ -101,7 +101,7 @@ public class Wifip2pService extends IntentService implements ReceiveSocket.Progr
 
         if(mContext instanceof Activity) {
             if(!((Activity)mContext).isFinishing() && !((Activity)mContext).isDestroyed())
-                Toast.makeText(mContext, file.getName() + " 接收完毕.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(mContext, file.getName() + " Received.", Toast.LENGTH_SHORT).show();
         }
 
         if(mContext instanceof Activity) {
@@ -116,7 +116,7 @@ public class Wifip2pService extends IntentService implements ReceiveSocket.Progr
 
     @Override
     public void onFaliure(File file) {
-        Log.e(TAG, "接收失败.");
+        Log.e(TAG, "Receive failed.");
 
         if (mReceiveProgress != null) {
             mReceiveProgress.dismiss();
@@ -125,7 +125,7 @@ public class Wifip2pService extends IntentService implements ReceiveSocket.Progr
 
         if(mContext instanceof Activity) {
             if(!((Activity)mContext).isFinishing() && !((Activity)mContext).isDestroyed())
-                Toast.makeText(mContext, "接收失败,请重试.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(mContext, "Reception failed, please try again.", Toast.LENGTH_SHORT).show();
         }
     }
 }
