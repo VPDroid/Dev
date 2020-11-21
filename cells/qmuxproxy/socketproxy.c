@@ -1692,7 +1692,6 @@ static int socketpair_connect_update(
  - Side Effects
  */
 /*=========================================================================*/
-//TODO: listener任务，必须等到connect任务起来之后才能运行，所以需要同步
 void*
 socketpair_list_listener_new_task(
     void *param)
