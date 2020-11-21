@@ -895,8 +895,7 @@ static int socketpair_client_add(
     UNLOCK_LIST_MUTEX(p_socket_pair);
 
     /* connect to server */
-    if (p_socket_pair->connect_path != NULL
-            && strlen(p_socket_pair->connect_path) != 0)
+    if (strlen(p_socket_pair->connect_path) != 0)
     {
         ALOGI("<socketpair_client_add> socketpair_get_connect_socket path = %s\n",
                 p_socket_pair->connect_path);
@@ -1844,8 +1843,7 @@ int trigger_connect(
     { '1' };
 
     /* connect to server */
-    if (p_socket_pair->connect_path != NULL
-            && strlen(p_socket_pair->connect_path) != 0)
+    if (strlen(p_socket_pair->connect_path) != 0)
     {
         ALOGI("<trigger_connect> socketpair_get_connect_socket path = %s\n", p_socket_pair->connect_path);
         fd = socketpair_get_connect_socket(NULL, p_socket_pair->connect_path);

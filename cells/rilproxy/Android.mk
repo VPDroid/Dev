@@ -10,6 +10,7 @@ LOCAL_SHARED_LIBRARIES := \
     liblog \
     libcutils \
 
+LOCAL_MODULE_OWNER := cells
 LOCAL_MODULE:= librildp
 LOCAL_MODULE_TAGS := optional
 
@@ -25,6 +26,7 @@ LOCAL_SHARED_LIBRARIES := \
     libcutils \
     librildp \
 
+LOCAL_MODULE_OWNER := cells
 LOCAL_MODULE:= rildpd
 LOCAL_MODULE_TAGS := optional
 
