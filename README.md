@@ -15,7 +15,7 @@ VPDroid is built on top of Cells, because its foreground VP design meets RQ1. Ho
 <img src="https://github.com/VPDroid/Dev/blob/main/VPDroid-Architecture-new.png" width="450" />
 
  
-The grey boxes represent Cells's modules reused by VPDroid. The white boxes represent functional modules updated by VPDroid. For updated code implementation, please see the section of the code introduction below.
+The grey boxes represent Cells's modules reused by VPDroid. The white boxes represent functional modules updated by VPDroid. For updated code implementation, please see the section of the code introduction below. Our clone attack demo video (https://youtu.be/cs6LxbDGPXU) shows that VPDroid enables the attacker to bypass KakaoTalk’s device-consistency check, and the victim is unaware that her account has been compromised. 
 
 # Code Introduction
 
@@ -83,7 +83,7 @@ The codes we created are as follows, which are based on the Android Open Source 
 
 The Android source code is:  android-10.0.0_r33
 
-The ways to download source code:  https://source.android.com/setup/develop/repo?hl=zh-cn
+The ways to download source code:  https://source.android.com/setup/develop/repo
 
 # System Prerequisites
 
