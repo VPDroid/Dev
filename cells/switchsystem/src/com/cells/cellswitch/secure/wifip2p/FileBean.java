@@ -3,7 +3,7 @@ package com.cells.cellswitch.secure.wifip2p;
 import java.io.Serializable;
 
 /**
- * description: 文件详情
+ * description: File details
  */
 
 public class FileBean implements Serializable{
@@ -14,7 +14,7 @@ public class FileBean implements Serializable{
 
     public long fileLength;
 
-    //MD5码：保证文件的完整性
+    //MD5 code: to ensure the integrity of the file
     public String md5;
 
     public FileBean(String filePath, long fileLength, String md5) {
