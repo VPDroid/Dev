@@ -21,7 +21,9 @@ The grey boxes represent Cells's modules reused by VPDroid. The white boxes repr
 
 # Code Introduction
 
-Since VPDroid is an os-level code with a  vast amount of code, we will upload the part of the code that belongs to “NEW USER-LEVEL DEVICE VIRTUALIZATION,” some kernel virtualization code, and “CUSTOMIZE THE VP’S DEVICE ATTRIBUTES.”  The codes we created are as follows, which are based on the Android Open Source Project (AOSP) (https://android.googlesource.com/platform/manifest) and Cells (https://cells-source.cs.columbia.edu/ ). The basic code included in the VPDroid code is the android operation system source code that has not been modified; we will no longer upload it but will provide a download link.
+Since VPDroid is an os-level code with a  vast amount of code, we will upload the part of the code that belongs to “NEW USER-LEVEL DEVICE VIRTUALIZATION,” some kernel virtualization, and “CUSTOMIZE THE VP’S DEVICE ATTRIBUTES.” The basic code included in the VPDroid is the android operation system source code that has not been modified; we will no longer upload it but will provide a download link.
+
+The codes we created are as follows, which are based on the Android Open Source Project (AOSP) (https://android.googlesource.com/platform/manifest) and Cells (https://cells-source.cs.columbia.edu/ ). 
 
 ## cells
   cells/: VP manager daemons
