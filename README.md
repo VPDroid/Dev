@@ -10,18 +10,20 @@ device-attribute customization functions are invisible to user-mode apps running
 
 VPDroid is built on top of Cells, because its foreground VP design meets RQ1. However, Cells fails to meet RQ2: it is not designed to edit device attributes, and its user-level device virtualization modifies the VP’s application framework layer, which can be detected by VP’s apps. Besides, Cells’s kernel-level device virtualization to many hardware devices are not compatible with Android 6.0 and later versions any more. We improve Cells significantly to achieve our requirements on mainstream Android versions.
 
+Our clone attack demo video (https://youtu.be/cs6LxbDGPXU) shows that VPDroid enables the attacker to bypass KakaoTalk’s device-consistency check, and the victim is unaware that her account has been compromised. 
+
 # Overview of VPDroid's Virtualization Architecture
 
 <img src="https://github.com/VPDroid/Dev/blob/main/VPDroid-Architecture-new.png" width="450" />
 
  
-The grey boxes represent Cells's modules reused by VPDroid. The white boxes represent functional modules updated by VPDroid. For updated code implementation, please see the section of the code introduction below.
+The grey boxes represent Cells's modules reused by VPDroid. The white boxes represent functional modules updated by VPDroid. For updated code implementation, please see the section of the code introduction below. 
 
 # Code Introduction
 
-Since VPDroid is a os-level code with a large amount of code, we will upload the part of the code that belongs to “NEW USER-LEVEL DEVICE VIRTUALIZATION” and “CUSTOMIZE THE VP’S DEVICE ATTRIBUTES.”  The basic source code included in the VPDroid code is the android operation system source code that has not been modified; we will no longer upload it but will provide a download link.
+Since VPDroid is an os-level code with a  vast amount of code, we will upload the part of the code that belongs to “NEW USER-LEVEL DEVICE VIRTUALIZATION,” some kernel virtualization, and “CUSTOMIZE THE VP’S DEVICE ATTRIBUTES.” The basic code included in the VPDroid is the android operation system source code that has not been modified; we will no longer upload it but will provide a download link.
 
-The codes we created are as follows, which are based on the Android Open Source Project (AOSP) (https://android.googlesource.com/platform/manifest) and Cells (https://cells-source.cs.columbia.edu/ ).
+The codes we created are as follows, which are based on the Android Open Source Project (AOSP) (https://android.googlesource.com/platform/manifest) and Cells (https://cells-source.cs.columbia.edu/ ). 
 
 ## cells
   cells/: VP manager daemons
@@ -83,7 +85,7 @@ The codes we created are as follows, which are based on the Android Open Source 
 
 The Android source code is:  android-10.0.0_r33
 
-The ways to download source code:  https://source.android.com/setup/develop/repo?hl=zh-cn
+The ways to download source code:  https://source.android.com/setup/develop/repo
 
 # System Prerequisites
 
