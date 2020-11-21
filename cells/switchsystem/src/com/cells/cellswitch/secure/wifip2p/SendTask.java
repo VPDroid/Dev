@@ -13,7 +13,7 @@ import com.cells.cellswitch.secure.wifip2p.ProgressDialog;
 import com.cells.cellswitch.secure.wifip2p.SendSocket;
 
 /**
- * description: 客户端发送文件详情
+ * description: Client send file details
  */
 
 public class SendTask extends AsyncTask<String, Integer, Void> implements SendSocket.ProgressSendListener {
@@ -34,7 +34,7 @@ public class SendTask extends AsyncTask<String, Integer, Void> implements SendSo
     @Override
     protected void onPreExecute() {
         super.onPreExecute();
-        //创建进度条
+        //Create progress bar
         mProgressDialog = new ProgressDialog(mContext);
     }
 
@@ -48,27 +48,27 @@ public class SendTask extends AsyncTask<String, Integer, Void> implements SendSo
 
     @Override
     public void onProgressChanged(File file, int progress) {
-       // Log.e(TAG, "发送进度：" + progress);
+       // Log.e(TAG, "Send progress：" + progress);
         mProgressDialog.setProgress(progress);
         mProgressDialog.setProgressText(progress + "%");;
     }
 
     @Override
     public void onFinished(File file) {
-        Log.e(TAG, "发送完成");
+        Log.e(TAG, "Send complete");
         if (mProgressDialog != null) {
             mProgressDialog.dismiss();
             mProgressDialog = null;
         }
         if(mContext instanceof Activity) {
             if(!((Activity)mContext).isFinishing() && !((Activity)mContext).isDestroyed())
-                Toast.makeText(mContext, file.getName() + " 发送完毕！", Toast.LENGTH_SHORT).show();
+                Toast.makeText(mContext, file.getName() + " Send complete！", Toast.LENGTH_SHORT).show();
         }
     }
 
     @Override
     public void onFaliure(File file) {
-        Log.e(TAG, "发送失败");
+        Log.e(TAG, "Failed to send");
         if (mProgressDialog != null) {
             mProgressDialog.dismiss();
             mProgressDialog = null;
@@ -76,7 +76,7 @@ public class SendTask extends AsyncTask<String, Integer, Void> implements SendSo
 
         if(mContext instanceof Activity) {
             if(!((Activity)mContext).isFinishing() && !((Activity)mContext).isDestroyed())
-                Toast.makeText(mContext, "发送失败，请重试！", Toast.LENGTH_SHORT).show();
+                Toast.makeText(mContext, "Sending failed, please try again！", Toast.LENGTH_SHORT).show();
         }
     }
 }
