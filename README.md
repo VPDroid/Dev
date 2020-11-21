@@ -30,6 +30,10 @@ The codes we created are as follows, which are based on the Android Open Source 
 
   cellsapp/: switch applications
 
+  rilproxy/: rild virtualization
+
+  qmuxproxy/: QCOM gps audio radio bluetooth socket data proxy
+
   busybox/: Linux tools
 
 ## system
