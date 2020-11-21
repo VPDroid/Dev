@@ -5,7 +5,7 @@ import java.io.FileInputStream;
 import java.security.MessageDigest;
 
 /**
- * 文件的MD5生成
+ * MD5 generation of files
  */
 public class Md5Util {
 
@@ -16,7 +16,7 @@ public class Md5Util {
             int len = 0;
             byte[] buffer = new byte[1024];
             while ((len = in.read(buffer)) != -1) {
-                digest.update(buffer, 0, len);//遍历文件,计算md5
+                digest.update(buffer, 0, len);//Traverse the file and calculate md5
             }
             byte[] bs = digest.digest();
             StringBuffer sb = new StringBuffer();
