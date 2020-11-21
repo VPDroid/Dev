@@ -19,7 +19,7 @@ import com.cells.cellswitch.secure.wifip2p.FileUtils;
 import com.cells.cellswitch.secure.wifip2p.Md5Util;
 
 /**
- * description:服务端监听的socket
+ * description: the socket monitored by the server
  */
 
 public class ReceiveSocket {
@@ -72,7 +72,7 @@ public class ReceiveSocket {
 
             mAcceptSocket = mServerSocket.accept();
 
-            Log.e(TAG, "客户端IP地址 : " + mAcceptSocket.getRemoteSocketAddress());
+            Log.e(TAG, "Client IP address : " + mAcceptSocket.getRemoteSocketAddress());
 
             long beginTime=System.currentTimeMillis();
 
@@ -82,7 +82,7 @@ public class ReceiveSocket {
             if(mInputStream.read(blen, 0, 4)!= 4){
                 mHandler.sendEmptyMessage(70);
                 clear();
-                Log.e(TAG, "文件头接收异常.");
+                Log.e(TAG, "File header reception exception.");
                 return;
             }
             int fileLength = ((blen[3] << 24)&0x0FFFFFFFF) |
@@ -93,7 +93,7 @@ public class ReceiveSocket {
             mFile = new File(FileUtils.CellsPath("hwcell.img"));
             if (mFile.exists()) {
                 mFile.delete();
-                Log.e(TAG, "客户端已有这个文件,删除.");
+                Log.e(TAG, "The client already has this file, delete it.");
             }
 
             mFileOutputStream = new FileOutputStream(mFile);
@@ -115,11 +115,11 @@ public class ReceiveSocket {
             }
 
             long ms = System.currentTimeMillis() - beginTime;
-            Log.e(TAG, "接收文件消耗 - " + ms + "(ms).");
+            Log.e(TAG, "Receive file consumption - " + ms + "(ms).");
 
             if(fileLength == total){
                 mHandler.sendEmptyMessage(60);
-                Log.e(TAG, "文件接收成功. ");
+                Log.e(TAG, "File received successfully. ");
             }else{
                 mHandler.sendEmptyMessage(70);
             }
@@ -129,12 +129,12 @@ public class ReceiveSocket {
             mHandler.sendEmptyMessage(70);
 
             clear();
-            Log.e(TAG, "文件接收异常.");
+            Log.e(TAG, "File reception is abnormal.");
         }
     }
 
     /**
-     * 监听接收进度
+     * Monitor receiving progress
      */
     private ProgressReceiveListener mListener;
 
@@ -144,21 +144,21 @@ public class ReceiveSocket {
 
     public interface ProgressReceiveListener {
 
-        //开始传输
+        //Start transfer
         void onReceive();
 
-        //当传输进度发生变化时
+        //When the transfer progress changes
         void onProgressChanged(File file, int progress);
 
-        //当传输结束时
+        //When the transfer ends
         void onFinished(File file);
 
-        //传输失败回调
+        //Transmission failure callback
         void onFaliure(File file);
     }
 
     /**
-     * 服务断开：释放内存
+     * Service disconnection: release memory
      */
     public void clear() {
         if (mServerSocket != null) {
