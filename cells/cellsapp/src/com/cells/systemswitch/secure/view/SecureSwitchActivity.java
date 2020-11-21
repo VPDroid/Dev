@@ -56,7 +56,7 @@ public class SecureSwitchActivity extends Activity {
 				e.printStackTrace();
 			}
 			long ms = System.currentTimeMillis() - beginTime;
-			Log.e(TAG, "启动镜像消耗 - " + ms + "(ms).");
+			Log.e(TAG, "Boot image consumption - " + ms + "(ms).");
 
 			int count = 25;
 			while(SystemProperties.get("persist.sys.cell1.init").equals("0") && count > 0){
@@ -93,7 +93,7 @@ public class SecureSwitchActivity extends Activity {
 				e.printStackTrace();
 			}
 			long ms = System.currentTimeMillis() - beginTime;
-			Log.e(TAG, "启动镜像消耗 - " + ms + "(ms).");
+			Log.e(TAG, "Boot image consumption - " + ms + "(ms).");
 
 			int count = 25;
 			while(SystemProperties.get("persist.sys.cell2.init").equals("0") && count > 0){
