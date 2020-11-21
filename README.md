@@ -12,7 +12,7 @@ VPDroid is built on top of Cells, because its foreground VP design meets RQ1. Ho
 
 # Overview of VPDroid's Virtualization Architecture
 
-<img src="https://github.com/VPDroid/Dev/blob/main/VPDroid-Architecture-new.png" width="500"  hight= "500"/>
+<img src="https://github.com/VPDroid/Dev/blob/main/VPDroid-Architecture-new.png" width="600"  hight= "500"/>
 
  
 The grey boxes represent Cells's modules reused by VPDroid. The white boxes represent functional modules updated by VPDroid. For updated code implementation, please see the section of the Code introduction below 
