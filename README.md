@@ -1,4 +1,4 @@
-# VPDroid（Android 10 ）
+# VPDroid（Android 10）
 
 We develop a lightweight Android OS-level virtualization architecture, VPDroid, to assist apps’ account security testing. With VPDroid, security analysts are able to configure different device attributes according to a target phone’s profiles and then boot up a virtual phone (VP) environment that closely approximates the target device. To deceive the cloned apps into thinking the smartphone is not changed, VPDroid has to meet two requirements (RQ1 & RQ2):
 
@@ -13,6 +13,7 @@ VPDroid is built on top of Cells, because its foreground VP design meets RQ1. Ho
 # Code introduction
 
 Since VPDroid is a os-level code with a large amount of code, we will upload the part of the code that belongs to “NEW USER-LEVEL DEVICE VIRTUALIZATION” and “CUSTOMIZE THE VP’S DEVICE ATTRIBUTES.”  The basic source code included in the VPDroid code is the android operation system source code that has not been modified; we will no longer upload it but will provide a download link.
+
 
 The codes we created are as follows, which are based on the Android Open Source Project (AOSP) (https://android.googlesource.com/platform/manifest) and Cells (https://cells-source.cs.columbia.edu/ ).
 
@@ -70,7 +71,7 @@ The codes we created are as follows, which are based on the Android Open Source 
 
 # basic code 
 
-The Android10.0 source code is:  android-10.0.0_r33
+The Android source code is:  android-10.0.0_r33
 
 The ways to download source code:  https://source.android.com/setup/develop/repo?hl=zh-cn
 
