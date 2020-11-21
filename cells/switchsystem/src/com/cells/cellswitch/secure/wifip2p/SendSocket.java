@@ -16,7 +16,7 @@ import java.io.IOException;
 import com.cells.cellswitch.secure.wifip2p.FileBean;
 
 /**
- * description: 客户端发送的socket
+ * description: Socket sent by the client
  */
 
 public class SendSocket {
@@ -104,7 +104,7 @@ public class SendSocket {
 
             mFile = new File(mFileBean.filePath);
             if (!mFile.exists()) {
-                Log.e(TAG, "文件不存在.");
+                Log.e(TAG, "file does not exist.");
                 mHandler.sendEmptyMessage(30);
                 return;
             }
@@ -138,7 +138,7 @@ public class SendSocket {
             }
 
             long ms = System.currentTimeMillis() - beginTime;
-            Log.e(TAG, "发送文件消耗 - " + ms + "(ms).");
+            Log.e(TAG, "Send file consumption- " + ms + "(ms).");
 
             mHandler.sendEmptyMessage(20);
 
@@ -146,10 +146,10 @@ public class SendSocket {
 
             if (mFile.exists()) {
                 mFile.delete();
-                Log.e(TAG, "删除传送文件.");
+                Log.e(TAG, "Delete transfer file.");
             }
 
-            Log.e(TAG, "文件发送成功.");
+            Log.e(TAG, "File sent successfully.");
         } catch (Exception e) {
             mHandler.sendEmptyMessage(30);
 
@@ -157,27 +157,27 @@ public class SendSocket {
 
             if (mFile.exists()) {
                 mFile.delete();
-                Log.e(TAG, "删除传送文件.");
+                Log.e(TAG, "Delete transfer file.");
             }
 
-            Log.e(TAG, "文件发送异常.");
+            Log.e(TAG, "File sending abnormal.");
         }
     }
 
     /**
-     * 监听发送进度
+     * Monitor sending progress
      */
     private ProgressSendListener mlistener;
 
     public interface ProgressSendListener {
 
-        //当传输进度发生变化时
+        //When the transfer progress changes
         void onProgressChanged(File file, int progress);
 
-        //当传输结束时
+        //When the transfer ends
         void onFinished(File file);
 
-        //传输失败时
+        //When transmission fails
         void onFaliure(File file);
     }
 }
