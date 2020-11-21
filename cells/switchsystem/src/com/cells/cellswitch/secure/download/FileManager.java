@@ -32,7 +32,7 @@ public class FileManager {
     }
 
     /**
-     * 通过网络的路径获取一个本地的文件路径
+     * Obtain a local file path through the network path
      *
      * @return
      */

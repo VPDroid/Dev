@@ -21,9 +21,9 @@ public class DownloadDispatcher {
     private static volatile DownloadDispatcher sDownloadDispatcher;
     private static final int CPU_COUNT = Runtime.getRuntime().availableProcessors();
     private static final int THREAD_SIZE = Math.max(3, Math.min(CPU_COUNT - 1, 5));
-    //核心线程数
+  
     private static final int CORE_POOL_SIZE = THREAD_SIZE;
-    //线程池
+   
     private ExecutorService mExecutorService;
     //private final Deque<DownloadTask> readyTasks = new ArrayDeque<>();
     private final Deque<DownloadTask> runningTasks = new ArrayDeque<>();
@@ -44,11 +44,7 @@ public class DownloadDispatcher {
         return sDownloadDispatcher;
     }
 
-    /**
-     * 创建线程池
-     *
-     * @return mExecutorService
-     */
+   
     public synchronized ExecutorService executorService() {
         if (mExecutorService == null) {
             mExecutorService = new ThreadPoolExecutor(CORE_POOL_SIZE, Integer.MAX_VALUE, 60, TimeUnit.SECONDS,
@@ -65,11 +61,7 @@ public class DownloadDispatcher {
     }
 
 
-    /**
-     * @param name     文件名
-     * @param url      下载的地址
-     * @param callBack 回调接口
-     */
+ 
     public void startDownload(final String name, final String url, final DownloadCallback callBack) {
         Call call = OkHttpManager.getInstance().asyncCall(url);
         call.enqueue(new Callback() {
@@ -80,7 +72,7 @@ public class DownloadDispatcher {
 
             @Override
             public void onResponse(@NonNull Call call, @NonNull Response response) {
-                //获取文件的大小
+           
                 long contentLength = response.body().contentLength();
                 Log.i(TAG, "contentLength=" + contentLength);
                 if (contentLength <= -1) {
@@ -93,13 +85,9 @@ public class DownloadDispatcher {
         });
     }
 
-    /**
-     * 根据url 去暂停那个
-     *
-     * @param url
-     */
+
     public void stopDownLoad(String url) {
-        //这个停止是不是这个正在下载的
+     
         for (DownloadTask runningTask : runningTasks) {
             if (runningTask.getUrl().equals(url)) {
                 runningTask.stopDownload();
@@ -107,13 +95,10 @@ public class DownloadDispatcher {
         }
     }
 
-    /**
-     * @param downLoadTask 下载任务
-     */
+ 
     public void recyclerTask(DownloadTask downLoadTask) {
         runningTasks.remove(downLoadTask);
-        //参考OkHttp的Dispatcher()的源码
-        //readyTasks.
+      
     }
 
 
