@@ -3,11 +3,11 @@ package com.cells.cellswitch.secure.wifip2p;
 import android.content.Context;
 
 /**
- * 手机屏幕相关的参数
+ * Parameters related to mobile phone screen
  */
 public class ScreenUtils {
     /**
-     * 根据手机分辨率从DP转成PX
+     * Convert from DP to PX according to the phone resolution
      * @param context
      * @param dpValue
      * @return
@@ -18,7 +18,7 @@ public class ScreenUtils {
     }
 
     /**
-     * 将sp值转换为px值，保证文字大小不变
+     * Convert sp value to px value to ensure that the text size remains unchanged
      * @param spValue
      * @return
      */
@@ -28,7 +28,7 @@ public class ScreenUtils {
     }
 
     /**
-     * 根据手机的分辨率PX(像素)转成DP
+     * Convert PX (pixel) to DP according to the resolution of the phone
      * @param context
      * @param pxValue
      * @return
@@ -39,7 +39,7 @@ public class ScreenUtils {
     }
 
     /**
-     * 将px值转换为sp值，保证文字大小不变
+     * Convert the px value to sp value to ensure that the text size remains unchanged
      * @param pxValue
      * @return
      */
