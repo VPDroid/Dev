@@ -4,7 +4,7 @@ import java.io.File;
 
 public interface DownloadCallback {
     /**
-     * 下载成功
+     * 
      *
      * @param file
      */
