@@ -77,9 +77,12 @@ The codes we created are as follows, which are based on the Android Open Source 
 ## Configuration file
 
   share-services: Compile system configuration file
+  
+  kernel-modify-config： Kernel config modify file
 
   build.VPDroid.prop/ build.VPDroid-1.prop/ build.VPDroid-2.prop/ build.VPDroid-3.prop:  Custom configuration file for update customized
  environment
+ 
 
 ## basic code 
 
