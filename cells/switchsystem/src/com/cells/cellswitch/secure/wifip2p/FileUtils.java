@@ -18,7 +18,7 @@ import java.io.File;
 public class FileUtils {
     
     /**
-     * 获取sd卡的路径
+     * Get the path of the sd card
      */
     public static String SdCardPath(String name) {
         String path = Environment.getExternalStorageDirectory() + "";
@@ -60,7 +60,7 @@ public class FileUtils {
     }
 
     /**
-     * 根据Uri获取图片绝对路径，解决Android4.4以上版本Uri转换
+     * Obtain the absolute path of the picture according to Uri, and solve the Uri conversion of Android 4.4 and above
      *
      * @param context
      * @param imageUri
