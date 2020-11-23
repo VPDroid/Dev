@@ -100,7 +100,7 @@ JDK version：openJDK version 9
 
 `source build/envsetup.sh`
 
-`lunch`
+`lunch 4`
 
 `make -j4`
 
