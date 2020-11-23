@@ -913,7 +913,7 @@ void property_load_boot_defaults(bool load_debug_prop) {
         std::string error;
 
         if(access("/.cell", F_OK) == 0){
-            if(vpproperties[name] != nullptr){
+            if(vpproperties.find(name) != vpproperties.end()){
                 if (PropertySet(name, vpproperties[name], &error) != PROP_SUCCESS) {
                     LOG(ERROR) << "Could not set '" << name << "' to '" << vpproperties[name]
                             << "' while loading VPDroid.prop files" << error;
