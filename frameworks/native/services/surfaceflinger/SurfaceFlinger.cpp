@@ -3043,7 +3043,7 @@ void SurfaceFlinger::updateInputWindowInfo() {
                 inputHandles[0].push_back(layer->fillInputInfo());
             }else{
                 sscanf(layer->systemName(), "cell%d",&i);
-                if(i >= 0 && i < MAX_CONTEXT){
+                if(i > 0 && i < MAX_CONTEXT){
                     inputHandles[i].push_back(layer->fillInputInfo());
                 }
             }
