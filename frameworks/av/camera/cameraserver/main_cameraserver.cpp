@@ -25,6 +25,7 @@ using namespace android;
 int main(int argc __unused, char** argv __unused)
 {
     OtherSystemServiceLoopRun();
+
     signal(SIGPIPE, SIG_IGN);
 
     // Set 5 threads for HIDL calls. Now cameraserver will serve HIDL calls in
