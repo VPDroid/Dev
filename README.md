@@ -74,7 +74,7 @@ We have created the VPDroid code as follows, which are based on the Android Open
   base/services/core/java/com/android/server/CellsService.java: net virtualization
 
   base/core/java/android/app/CellsPrivateServiceManager.java: cellsservice java service
-## Configuration file
+## configuration file
 
   share-services: Compile system configuration file
   
