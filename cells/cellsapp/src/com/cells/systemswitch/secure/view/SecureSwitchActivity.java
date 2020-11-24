@@ -18,6 +18,9 @@ import com.cells.systemswitch.secure.R;
 
 import android.app.CellsPrivateServiceManager;
 
+import android.bluetooth.BluetoothAdapter;
+import android.nfc.NfcAdapter;
+
 public class SecureSwitchActivity extends Activity {
 	private static final String TAG = "SecureSwitchActivity";
 
@@ -30,6 +33,7 @@ public class SecureSwitchActivity extends Activity {
 			mCellsService = new CellsPrivateServiceManager(SecureSwitchActivity.this, 
 																					ServiceManager.getService("CellsPrivateService"));
 			try{
+				disableAdapter();
 				mCellsService.switchCellsVM("host");
 			}catch(RemoteException e){
 				e.printStackTrace();
@@ -70,6 +74,7 @@ public class SecureSwitchActivity extends Activity {
 		}
 
 		try {
+			disableAdapter();
 			mCellsService.switchCellsVM("cell1");
 		}catch(RemoteException e){
 			e.printStackTrace();
@@ -107,6 +112,7 @@ public class SecureSwitchActivity extends Activity {
 		}
 
 		try {
+			disableAdapter();
 			mCellsService.switchCellsVM("cell2");
 		}catch(RemoteException e){
 			e.printStackTrace();
@@ -114,4 +120,14 @@ public class SecureSwitchActivity extends Activity {
 
 		finish();
 	}
+
+	private void disableAdapter(){
+		BluetoothAdapter blueadapter = BluetoothAdapter.getDefaultAdapter();
+		if(blueadapter != null)
+			blueadapter.disable();
+		NfcAdapter nfcAdapter = NfcAdapter.getDefaultAdapter(SecureSwitchActivity.this);
+		if(nfcAdapter != null)
+			nfcAdapter.disable();
+	}
+
 }
