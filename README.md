@@ -80,11 +80,11 @@ We have created the VPDroid code as follows, which are based on the Android Open
 
 ## configuration file
 
-  share-services: Compile system configuration file
+  share-services: compile system configuration file
   
-  kernel-modify-config： Kernel config modify file
+  kernel-modify-config： kernel config modify file
 
-  build.VPDroid.prop/ build.VPDroid-1.prop/ build.VPDroid-2.prop/ build.VPDroid-3.prop:  Custom configuration file for update customized environment
+  build.VPDroid.prop/ build.VPDroid-1.prop/ build.VPDroid-2.prop/ build.VPDroid-3.prop:  custom configuration file for update customized environment
  
 ## basic code 
 
