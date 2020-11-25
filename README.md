@@ -26,7 +26,7 @@ Since VPDroid is an os-level code with a vast amount of code, we will upload the
 We have created the VPDroid code as follows, which are based on the Android Open Source Project (AOSP) (https://android.googlesource.com/platform/manifest) and Cells (https://cells-source.cs.columbia.edu/ ). 
 
 ## android-binder
-  Android os binder virtualization
+  binder virtualization  of the android operating system
 
 ## cells
   cells/: VP manager daemons
@@ -83,8 +83,7 @@ We have created the VPDroid code as follows, which are based on the Android Open
   
   kernel-modify-config： Kernel config modify file
 
-  build.VPDroid.prop/ build.VPDroid-1.prop/ build.VPDroid-2.prop/ build.VPDroid-3.prop:  Custom configuration file for update customized
- environment
+  build.VPDroid.prop/ build.VPDroid-1.prop/ build.VPDroid-2.prop/ build.VPDroid-3.prop:  Custom configuration file for update customized environment
  
 
 ## basic code 
