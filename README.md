@@ -67,8 +67,6 @@ We have created the VPDroid code as follows, which are based on the Android Open
 
   native/libs/binder/: binder virtualization
 
-  native/libs/sensor/: sensor virtualization
-
   native/services/surfaceflinger/: display virtualization
 
   base/services/core/java/com/android/server/CellsService.java: net virtualization
