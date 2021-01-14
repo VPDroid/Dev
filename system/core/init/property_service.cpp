@@ -928,6 +928,21 @@ void property_load_boot_defaults(bool load_debug_prop) {
         }
     }
 
+    if(access("/.cell", F_OK) == 0){
+        for (const auto& [name, value] : vpproperties) {
+            std::string error;
+
+            if(properties.find(name) != properties.end()){
+                continue;
+            }
+
+            if (PropertySet(name, value, &error) != PROP_SUCCESS) {
+                LOG(ERROR) << "Could not set '" << name << "' to '" << value
+                        << "' while loading VPDroid.prop files" << error;
+            }
+        }
+    }
+
     property_initialize_ro_product_props();
     property_derive_build_fingerprint();
 

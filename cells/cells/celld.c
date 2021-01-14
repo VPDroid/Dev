@@ -812,7 +812,7 @@ static int __umount_rootmount(const char* root_path)
 	char dev_persist_dir_name[PATH_MAX];
 	char dev_mnt_vendor_persist_dir_name[PATH_MAX];
 	char dev_metadata_dir_name[PATH_MAX];
-	char dev_cache_dir_name[PATH_MAX];
+	//char dev_cache_dir_name[PATH_MAX];
 
 	int ret = 0;
 
@@ -858,12 +858,12 @@ static int __umount_rootmount(const char* root_path)
 		ALOGD("umount %s = %s", dev_metadata_dir_name, strerror(errno));
 	}
 
-	errno = 0;
-	sprintf(dev_cache_dir_name, "%s/cache", root_path);
-	if(is_mounted(dev_cache_dir_name)){
-		ret |= umount(dev_cache_dir_name);//rw
-		ALOGD("umount %s = %s" , dev_cache_dir_name, strerror(errno));
-	}
+	//errno = 0;
+	//sprintf(dev_cache_dir_name, "%s/cache", root_path);
+	//if(is_mounted(dev_cache_dir_name)){
+	//	ret |= umount(dev_cache_dir_name);//rw
+	//	ALOGD("umount %s = %s" , dev_cache_dir_name, strerror(errno));
+	//}
 
 	errno = 0;
 	sprintf(dev_oem_dir_name, "%s/oem", root_path);

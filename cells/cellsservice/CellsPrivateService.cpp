@@ -129,7 +129,7 @@ static void* gotosleep(void* o)
     return (void*)0;
 };
 
-static void create_gotosleep_pthread()
+static void create_gotosleep_pthread(void)
 {
     int ret;
     pthread_t daemon_thread;
@@ -234,7 +234,7 @@ status_t CellsPrivateService::enterHost(const String16& name)
         android::sp<android::IPowerManager> mPowerManager = 
             android::interface_cast<android::IPowerManager>(sm->checkService(android::String16("power")));
         if(mPowerManager != NULL){
-            mPowerManager->wakeUp(long(ns2ms(systemTime())),android::String16("enter_self"),android::String16(""));
+            mPowerManager->wakeUp(long(ns2ms(systemTime())),android::String16("enter_self"),android::String16("CellsPrivateService"));
         }
     }
 
@@ -309,7 +309,7 @@ status_t CellsPrivateService::enterCell(const String16& name)
         android::sp<android::IPowerManager> mPowerManager = 
             android::interface_cast<android::IPowerManager>(sm->checkService(android::String16("power")));
         if(mPowerManager != NULL){
-            mPowerManager->wakeUp(long(ns2ms(systemTime())),android::String16("enter_self"),android::String16(""));
+            mPowerManager->wakeUp(long(ns2ms(systemTime())),android::String16("enter_self"),android::String16("CellsPrivateService"));
         }
     }
 
@@ -398,6 +398,8 @@ status_t CellsPrivateService::vmSystemReady(const String16& name)
 
     sprintf(pname, "persist.sys.%s.init",  String8(name).string());
     property_set(pname, "1");
+
+    property_set("ctl.restart", "adbd");
 
     SYSTEMPRIVATE_LOGD("SYSTEMREADY name = %s", String8(name).string());
     return NO_ERROR;
