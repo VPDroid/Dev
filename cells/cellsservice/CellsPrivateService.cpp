@@ -234,7 +234,8 @@ status_t CellsPrivateService::enterHost(const String16& name)
         android::sp<android::IPowerManager> mPowerManager = 
             android::interface_cast<android::IPowerManager>(sm->checkService(android::String16("power")));
         if(mPowerManager != NULL){
-            mPowerManager->wakeUp(long(ns2ms(systemTime())),android::String16("enter_self"),android::String16("CellsPrivateService"));
+            mPowerManager->wakeUp(long(ns2ms(systemTime())),WAKE_REASON_POWER_BUTTON,
+                            android::String16("enter_self"),android::String16("CellsPrivateService"));
         }
     }
 
@@ -309,7 +310,8 @@ status_t CellsPrivateService::enterCell(const String16& name)
         android::sp<android::IPowerManager> mPowerManager = 
             android::interface_cast<android::IPowerManager>(sm->checkService(android::String16("power")));
         if(mPowerManager != NULL){
-            mPowerManager->wakeUp(long(ns2ms(systemTime())),android::String16("enter_self"),android::String16("CellsPrivateService"));
+            mPowerManager->wakeUp(long(ns2ms(systemTime())),WAKE_REASON_POWER_BUTTON,
+                            android::String16("enter_self"),android::String16("CellsPrivateService"));
         }
     }
 

@@ -83,7 +83,7 @@ public class SecureSwitchActivity extends Activity {
 		finish();
 	}
 
-	public void btncell2(View v)
+	/*public void btncell2(View v)
 	{
 		CellsPrivateServiceManager mCellsService;
 		mCellsService = new CellsPrivateServiceManager(SecureSwitchActivity.this, 
@@ -119,7 +119,7 @@ public class SecureSwitchActivity extends Activity {
 		}
 
 		finish();
-	}
+	}*/
 
 	private void disableAdapter(){
 		BluetoothAdapter blueadapter = BluetoothAdapter.getDefaultAdapter();
