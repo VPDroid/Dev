@@ -1,4 +1,18 @@
-# VPDroid (Android 10)
+# paper
+This software is the outcome of our accademic research. 
+
+If you use this code, please cite our accademic paper as:
+
+@inproceedings{massarelli2018safe,
+  title={App’s Auto-Login Function Security Testing via Android OS-Level Virtualization},
+  author={Wenna, Song and Jiang, Ming and Lin, Jiang and Han, Yan and Yi, Xiang and Yuan, Chen and Jianming, Fu and Guojun, Peng},
+  booktitle={Proceedings of 43rd International Conference on Software Engineering},
+  year={2021}
+}
+
+# VPDroid (Android 6)
+
+We now provide is the VPDroid source version of Android 6.0.
 
 We develop a lightweight Android OS-level virtualization architecture, VPDroid, to assist apps’ account security testing. With VPDroid, security analysts are able to configure different device attributes according to a target phone’s profiles and then boot up a virtual phone (VP) environment that closely approximates the target device. To deceive the cloned apps into thinking the smartphone is not changed, VPDroid has to meet two requirements (RQ1 & RQ2):
 
@@ -82,25 +96,25 @@ We have created the VPDroid code as follows, which are based on the Android Open
   
   kernel-modify-config： kernel config modify file
 
-  build.VPDroid.prop/ build.VPDroid-1.prop/ build.VPDroid-2.prop/ build.VPDroid-3.prop:  custom configuration file for update customized environment
+  build.VPDroid.prop/:  custom configuration file for update customized environment
  
 ## basic code 
 
-The Android source code is:  android-10.0.0_r33
+The Android source code is:  android-6.0.1_r62
 
 The ways to download source code:  https://source.android.com/setup/develop/repo
 
-# System Prerequisites
+# Compilation system requirements
 
-Operating System: Ubuntu 20.04 LTS
+VMWare Operating System: Ubuntu 20.04 LTS
 
-JDK version：openJDK version 9
+JDK version：openJDK version 7
 
 # Compile Command
 
 `source build/envsetup.sh`
 
-`lunch 4`
+`lunch 17`
 
 `make -j4`
 
