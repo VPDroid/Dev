@@ -30,7 +30,7 @@ Our clone attack demo video (https://youtu.be/cs6LxbDGPXU) shows that VPDroid en
 ## Overview of VPDroid's Virtualization Architecture
 
 
-<img src="https://github.com/VPDroid/Dev/blob/main/VPDroid-Architecture-new.png" width="398">
+<img src="https://github.com/VPDroid/Dev/blob/main/VPDroid-Architecture-new1.png" width="398">
  
 The grey boxes represent Cells's modules reused by VPDroid. The white boxes represent functional modules updated by VPDroid. For updated code implementation, please see the section of the code introduction below. 
 
