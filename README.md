@@ -10,7 +10,7 @@ If you use this code, please cite our accademic paper as:
   year={2021}
 }
 
-# VPDroid (Android 6)
+# VPDroid ( Android 6.0 )
 
 We now provide is the VPDroid source version of Android 6.0.
 
