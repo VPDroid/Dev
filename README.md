@@ -1,4 +1,4 @@
-# paper
+# Paper
 This software is the outcome of our accademic research. 
 
 If you use this code, please cite our accademic paper as:
