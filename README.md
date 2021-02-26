@@ -4,7 +4,7 @@ This software is the outcome of our accademic research.
 
 If you use this code, please cite our accademic paper as:
 ```
-@inproceedings{massarelli2018safe,
+@inproceedings{Wen2021A,
   title={App’s Auto-Login Function Security Testing via Android OS-Level Virtualization},
   author={Wenna, Song and Jiang, Ming and Lin, Jiang and Han, Yan and Yi, Xiang and Yuan, Chen and Jianming, Fu and Guojun, Peng},
   booktitle={Proceedings of 43rd International Conference on Software Engineering},
