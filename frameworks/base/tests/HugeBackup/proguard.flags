@@ -1,3 +1,0 @@
--keepclassmembers class com.android.hugebackup.HugeBackupActivity {
-    public void onRestoreButtonClick(android.view.View);
-}

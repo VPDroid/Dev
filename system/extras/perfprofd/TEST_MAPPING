@@ -1,7 +1,0 @@
-{
-  "presubmit": [
-    {
-      "name": "perfprofd_test"
-    }
-  ]
-}

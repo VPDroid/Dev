@@ -1,7 +1,0 @@
-libbcinfo {
-  global:
-    _ZN6bcinfo*;
-    _ZN8llvm_3_218WriteBitcodeToFile*;
-  local:
-    *;
-};

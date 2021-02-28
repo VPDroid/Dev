@@ -1,1 +1,0 @@
-{ global: GETEXTRACTORDEF; local: *; };

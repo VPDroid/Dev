@@ -1,6 +1,0 @@
-cc_library_static {
-    name: "libmcldX86Info",
-    defaults: ["mcld-defaults"],
-    host_supported: true,
-    srcs: ["X86TargetInfo.cpp"],
-}

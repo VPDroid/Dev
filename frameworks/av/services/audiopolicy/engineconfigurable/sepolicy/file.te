@@ -1,2 +1,0 @@
-# Policy Engine remote connection for runtime debug of parameter framework
-type audioserver_socket, file_type, coredomain_socket;

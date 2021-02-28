@@ -1,4 +1,0 @@
-filegroup {
-    name: "IMidiDeviceServer.aidl",
-    srcs: ["android/media/midi/IMidiDeviceServer.aidl"],
-}

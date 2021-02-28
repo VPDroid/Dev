@@ -1,4 +1,0 @@
-Where has aidl gone?
-
-  aidl has moved to //system/tools/aidl as part of adding support for
-  generating bindings in C++.

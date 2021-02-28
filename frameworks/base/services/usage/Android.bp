@@ -1,5 +1,0 @@
-java_library_static {
-    name: "services.usage",
-    srcs: ["java/**/*.java"],
-    libs: ["services.core"],
-}

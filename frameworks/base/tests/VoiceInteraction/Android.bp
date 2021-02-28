@@ -1,5 +1,0 @@
-android_test {
-    name: "VoiceInteraction",
-    srcs: ["**/*.java"],
-    platform_apis: true,
-}

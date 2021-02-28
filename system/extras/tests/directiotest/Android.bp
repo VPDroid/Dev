@@ -1,8 +1,0 @@
-cc_binary {
-    name: "directiotest",
-    srcs: ["directiotest.c"],
-    cflags: [
-        "-Wall",
-        "-Werror",
-    ],
-}

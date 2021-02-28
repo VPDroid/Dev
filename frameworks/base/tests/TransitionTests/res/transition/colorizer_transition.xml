@@ -1,6 +1,0 @@
-<recolor xmlns:android="http://schemas.android.com/apk/res/android">
-    <targets>
-        <target android:targetId="@id/password"/>
-        <target android:targetId="@id/passwordEdit"/>
-    </targets>
-</recolor>

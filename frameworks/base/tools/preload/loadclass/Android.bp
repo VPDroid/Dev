@@ -1,4 +1,0 @@
-java_test {
-    name: "loadclass",
-    srcs: ["**/*.java"],
-}

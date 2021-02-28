@@ -1,5 +1,0 @@
-android_test {
-    name: "EffectsTest",
-    srcs: ["**/*.java"],
-    platform_apis: true,
-}

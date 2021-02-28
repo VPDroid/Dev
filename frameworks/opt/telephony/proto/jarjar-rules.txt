@@ -1,2 +1,0 @@
-rule com.google.protobuf.nano.** com.android.internal.telephony.protobuf.nano.@1
-

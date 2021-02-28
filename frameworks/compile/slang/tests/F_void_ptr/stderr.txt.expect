@@ -1,1 +1,0 @@
-void_ptr.rs:4:7: error: void pointers cannot be exported: 'v'

@@ -1,4 +1,0 @@
-service vendor.pixelstats_vendor /vendor/bin/pixelstats-vendor
-    class hal
-    user system
-    group system

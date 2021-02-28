@@ -1,5 +1,0 @@
-android_test {
-    name: "scoaudiotest",
-    platform_apis: true,
-    srcs: ["**/*.java"],
-}

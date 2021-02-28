@@ -1,8 +1,0 @@
-cc_binary {
-    name: "cpustats",
-    srcs: ["cpustats.c"],
-    cflags: [
-        "-Wall",
-        "-Werror",
-    ],
-}

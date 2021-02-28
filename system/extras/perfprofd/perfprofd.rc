@@ -1,5 +1,0 @@
-service perfprofd /system/bin/perfprofd --binder
-    class late_start
-    user root
-    group root wakelock
-    writepid /dev/cpuset/system-background/tasks

@@ -1,1 +1,0 @@
-foreach_from_kernel.rs:13:3: error: Invalid kernel launch call made from inside another kernel.

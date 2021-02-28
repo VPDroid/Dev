@@ -1,7 +1,0 @@
-{
-  "presubmit": [
-    {
-      "name": "linkerconfig_modules_unittest"
-    }
-  ]
-}

@@ -1,1 +1,0 @@
-rs_prefix.rs:4:6: error: invalid function name prefix, "rs" is reserved: 'rs_foo'

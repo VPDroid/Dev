@@ -1,1 +1,0 @@
-struct_array_copy.rs:35:8: error: Arrays of RS object types within structures cannot be copied

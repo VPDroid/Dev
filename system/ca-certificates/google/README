@@ -1,3 +1,0 @@
-These CA certs are appropriate for connecting to Google services. They are
-manually synchronized with https://pki.google.com/roots.pem. See
-https://pki.google.com/faq.html for more details.

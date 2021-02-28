@@ -1,1 +1,0 @@
-subdir/subsubdir/test.txt comes from assets

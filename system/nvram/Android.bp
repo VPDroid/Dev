@@ -1,6 +1,0 @@
-subdirs = [
-    "client",
-    "core",
-    "hal",
-    "messages",
-]

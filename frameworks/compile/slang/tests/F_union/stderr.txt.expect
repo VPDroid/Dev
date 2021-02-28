@@ -1,3 +1,0 @@
-union.rs:4:7: error: unions cannot be exported: 'u'
-union.rs:9:14: error: unions containing RS object types are not allowed
-union.rs:16:11: error: unions containing RS object types are not allowed

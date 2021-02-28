@@ -1,7 +1,0 @@
-{
-  "presubmit": [
-    {
-      "name": "ashmemd_test"
-    }
-  ]
-}

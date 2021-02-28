@@ -1,1 +1,0 @@
-../../media/libmedia/include/media/IMediaMetadataRetriever.h

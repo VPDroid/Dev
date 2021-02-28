@@ -1,3 +1,0 @@
-(/.*)?                   u:object_r:system_file:s0
-/etc(/.*)?               u:object_r:system_zoneinfo_file:s0
-

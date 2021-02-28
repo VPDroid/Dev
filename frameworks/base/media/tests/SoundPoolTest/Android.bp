@@ -1,5 +1,0 @@
-android_test {
-    name: "SoundPoolTest",
-    srcs: ["**/*.java"],
-    platform_apis: true,
-}

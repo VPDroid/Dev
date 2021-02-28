@@ -1,7 +1,0 @@
-{
-  "presubmit" : [
-    {
-      "name" : "idmap2_tests"
-    }
-  ]
-}

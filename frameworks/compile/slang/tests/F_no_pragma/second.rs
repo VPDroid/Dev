@@ -1,2 +1,0 @@
-#pragma version(1)
-
