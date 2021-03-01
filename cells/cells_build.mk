@@ -10,4 +10,4 @@ endif
 # Library for ART-specific functions
 ##########################################################
 
-PRODUCT_PACKAGES += celld cellc cellsservice cswitch  cellsupdownvm cellssync kernel_kmsg_cells logcat_cells  cellsapp
+PRODUCT_PACKAGES += celld cellc cellsservice cswitch  cellsupdownvm cellssync kernel_kmsg_cells logcat_cells  switchsystem

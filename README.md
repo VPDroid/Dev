@@ -45,9 +45,14 @@ We have created the VPDroid code as follows, which are based on the Android Open
     
   cellsservice/: VP manager
 
-  cellsapp/: switch applications
+  switchsystem/: switch applications
 
-  Kernel_Kmsg/: Linux kernel message
+  Kernel_Kmsg/: Linux kernel message deamon
+
+  logcat/: logcat message deamon
+
+### angler
+  angler/: 6p angler device config files (host & VP rc files)
 
 ### system
   core/adb/: adb mutex virtualization
@@ -77,8 +82,6 @@ We have created the VPDroid code as follows, which are based on the Android Open
   native/libs/binder/: binder virtualization
 
   native/services/surfaceflinger/: display virtualization
-
-  base/services/core/java/com/android/server/CellsService.java: net virtualization
 
   base/core/java/android/app/CellsPrivateServiceManager.java: cellsservice java service
 
