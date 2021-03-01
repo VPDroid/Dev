@@ -47,22 +47,12 @@ We have created the VPDroid code as follows, which are based on the Android Open
 
   cellsapp/: switch applications
 
-  rilproxy/: rild virtualization
-
-  qmuxproxy/: QCOM gps audio radio bluetooth socket data proxy
-
-  busybox/: Linux tools
+  Kernel_Kmsg/: Linux kernel message
 
 ### system
   core/adb/: adb mutex virtualization
 
   core/init/: VP startup
-
-  core/rootdir/init.cells.rc: VP's init.rc
-
-  core/rootdir/cells/: additional configuration files for the VP
-
-  core/sdcard/: sdcard virtualization
 
 ### kernel
   drivers/base/core.c: drv namespace initialization
@@ -71,7 +61,11 @@ We have created the VPDroid code as follows, which are based on the Android Open
 
   kernel/nsproxy.c: namespaces proxy
 
-  drivers/android/binder.c: binder virtualization
+  drivers/staging/android/binder.c: binder virtualization
+
+  drivers/staging/android/logger.c: logcat virtualization
+
+  drivers/staging/android/alarm-dev.c: alarm virtualization
 
   drivers/input/evdev.c: input virtualization
 
@@ -87,15 +81,8 @@ We have created the VPDroid code as follows, which are based on the Android Open
   base/services/core/java/com/android/server/CellsService.java: net virtualization
 
   base/core/java/android/app/CellsPrivateServiceManager.java: cellsservice java service
-  
-### android-binder
-  binder virtualization  of the android operating system
 
 ### configuration file
-
-  share-services: compile system configuration file
-  
-  kernel-modify-config： kernel config modify file
 
   build.VPDroid.prop/:  custom configuration file for update customized environment
  
