@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  Copyright (c) 2014 The Chromium Authors. All rights reserved.
+
+     Use of this source code is governed by a BSD-style license that can be
+     found in the LICENSE file.
+ -->
+
+<resources xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="webviewgoogle_play_store_title" msgid="6227907912304696478">"I-WebView Yesistimu ye-Android"</string>
+    <string name="webviewgoogle_play_store_tagline" msgid="825305078705915422">"Okuqukethwe kwewebhu kwezinhlelo zokusebenza, okunikwe amandla yi-Chrome"</string>
+    <string name="webviewgoogle_play_store_description" msgid="3054088773113944489">"I-Android WebView yingxenye yesistimu enikwe amandla yi-Chrome evumela izinhlelo zokusebenza ze-Android ukuthi zibonise okuqukethwe kwewebhu. Le ngxenye ifakwa ngaphambili kudivayisi yakho futhi kuzomele igcinwe isesikhathini ukuze kuqinisekiswe ukuthi unezibuyekezo zokuvikela zakamuva nokunye ukulungiswa kweziphazamisi."</string>
+</resources>

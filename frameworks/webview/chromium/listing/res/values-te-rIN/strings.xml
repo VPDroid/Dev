@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  Copyright (c) 2014 The Chromium Authors. All rights reserved.
+
+     Use of this source code is governed by a BSD-style license that can be
+     found in the LICENSE file.
+ -->
+
+<resources xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="webviewgoogle_play_store_title" msgid="6227907912304696478">"Android సిస్టమ్ వెబ్‌వీక్షణ"</string>
+    <string name="webviewgoogle_play_store_tagline" msgid="825305078705915422">"అనువర్తనాల కోసం వెబ్ కంటెంట్, Chrome ఆధారితం"</string>
+    <string name="webviewgoogle_play_store_description" msgid="3054088773113944489">"Android వెబ్‌వీక్షణ అనేది వెబ్ కంటెంట్‌ను ప్రదర్శించడానికి Android అనువర్తనాలను అనుమతించే Chrome ఆధారితమైన సిస్టమ్‌లోని భాగం. ఈ భాగం మీ పరికరంలో ముందుగానే ఇన్‌స్టాల్ చేయబడి ఉంటుంది మరియు మీకు సరికొత్త భద్రతా నవీకరణలు మరియు ఇతర బగ్ పరిష్కారాలు ఉన్నాయని నిర్ధారించడానికి ఎప్పటికప్పుడు తాజాగా ఉంచాలి."</string>
+</resources>

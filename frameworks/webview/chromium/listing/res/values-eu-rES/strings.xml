@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  Copyright (c) 2014 The Chromium Authors. All rights reserved.
+
+     Use of this source code is governed by a BSD-style license that can be
+     found in the LICENSE file.
+ -->
+
+<resources xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="webviewgoogle_play_store_title" msgid="6227907912304696478">"Android sistemaren Web-ikuspegia"</string>
+    <string name="webviewgoogle_play_store_tagline" msgid="825305078705915422">"Aplikazioetarako web-edukia, Chrome teknologiarekin"</string>
+    <string name="webviewgoogle_play_store_description" msgid="3054088773113944489">"Android Web-ikuspegia Chrome-ren teknologia darabilen sistemaren osagaia da eta web-edukia bistaratzea baimentzen die Android aplikazioei. Osagaia instalatuta dator gailuan eta eguneratuta izan behar da azken segurtasun-eguneratzeak eta bestelako konponketak eginda dituzula ziurtatzeko."</string>
+</resources>

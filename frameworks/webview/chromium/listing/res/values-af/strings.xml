@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  Copyright (c) 2014 The Chromium Authors. All rights reserved.
+
+     Use of this source code is governed by a BSD-style license that can be
+     found in the LICENSE file.
+ -->
+
+<resources xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="webviewgoogle_play_store_title" msgid="6227907912304696478">"Android Stelselwebaansig"</string>
+    <string name="webviewgoogle_play_store_tagline" msgid="825305078705915422">"Webinhoud vir programme, aangedryf deur Chrome"</string>
+    <string name="webviewgoogle_play_store_description" msgid="3054088773113944489">"Android Webaansig is \'n stelselkomponent wat deur Chrome aangedryf word wat Android-programme toelaat om webinhoud te wys. Hierdie komponent is vooraf in jou toestel geïnstalleer en behoort bygewerk gehou te word om te verseker dat jy die jongste sekuriteitopdaterings en ander foutoplossings het."</string>
+</resources>

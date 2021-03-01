@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  Copyright (c) 2014 The Chromium Authors. All rights reserved.
+
+     Use of this source code is governed by a BSD-style license that can be
+     found in the LICENSE file.
+ -->
+
+<resources xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="webviewgoogle_play_store_title" msgid="6227907912304696478">"Android സിസ്‌റ്റം വെബ്‌കാഴ്‌ച"</string>
+    <string name="webviewgoogle_play_store_tagline" msgid="825305078705915422">"Chrome നൽകുന്ന, അപ്ലിക്കേഷനുകൾക്കുള്ള വെബ് ഉള്ളടക്കം"</string>
+    <string name="webviewgoogle_play_store_description" msgid="3054088773113944489">"വെബ് ഉള്ളടക്കം ദൃശ്യമാകാൻ Android അപ്ലിക്കേഷനുകളെ അനുവദിക്കുന്ന Chrome-ന്റെ ഒരു സിസ്റ്റം ഘടകമാണ് Android വെബ്‌കാഴ്‌ച. നിങ്ങളുടെ ഉപകരണത്തിൽ ഈ ഘടകം മുൻകൂട്ടി ഇൻസ്റ്റാളുചെയ്‌തിട്ടുണ്ട്, നിങ്ങൾക്ക് ഏറ്റവും പുതിയ സുരക്ഷാ അപ്‌ഡേറ്റുകളും മറ്റ് ബഗ് പരിഹരിക്കലുകളുമുണ്ടെന്ന് ഉറപ്പുവരുത്താൻ അത് അപ്‌റ്റുഡേറ്റായി നിലനിർത്തണം."</string>
+</resources>

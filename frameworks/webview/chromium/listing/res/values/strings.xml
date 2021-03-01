@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (c) 2014 The Chromium Authors. All rights reserved.
+
+     Use of this source code is governed by a BSD-style license that can be
+     found in the LICENSE file.
+-->
+
+<resources xmlns:android="http://schemas.android.com/apk/res/android" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Play Store title text [CHAR-LIMIT=30] -->
+    <string name="webviewgoogle_play_store_title">Android System WebView</string>
+
+    <!-- Play Store tagline text. [CHAR-LIMIT=80] -->
+    <string name="webviewgoogle_play_store_tagline">Web content for apps, powered by Chrome</string>
+
+    <!-- Play Store description text. [CHAR-LIMIT=4000] -->
+    <string name="webviewgoogle_play_store_description">Android Webview is a system component powered by Chrome that allows Android apps to display web content. This component is pre-installed on your device and should be kept up to date to ensure you have the latest security updates and other bug fixes.</string>
+
+</resources>

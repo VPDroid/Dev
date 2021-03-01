@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  Copyright (c) 2014 The Chromium Authors. All rights reserved.
+
+     Use of this source code is governed by a BSD-style license that can be
+     found in the LICENSE file.
+ -->
+
+<resources xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="webviewgoogle_play_store_title" msgid="6227907912304696478">"Android System WebView"</string>
+    <string name="webviewgoogle_play_store_tagline" msgid="825305078705915422">"Веб-садржај за апликације, омогућава Chrome"</string>
+    <string name="webviewgoogle_play_store_description" msgid="3054088773113944489">"Android Webview је системска компонента коју омогућава Chrome и која Android апликацијама омогућава да приказују веб-садржај. Та компонента је унапред инсталирана на уређају и треба је редовно ажурирати да бисте били сигурни да ћете имати најновија безбедносна ажурирања и друге исправке грешака."</string>
+</resources>

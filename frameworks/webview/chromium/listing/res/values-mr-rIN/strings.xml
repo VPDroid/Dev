@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  Copyright (c) 2014 The Chromium Authors. All rights reserved.
+
+     Use of this source code is governed by a BSD-style license that can be
+     found in the LICENSE file.
+ -->
+
+<resources xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="webviewgoogle_play_store_title" msgid="6227907912304696478">"Android प्रणाली WebView"</string>
+    <string name="webviewgoogle_play_store_tagline" msgid="825305078705915422">"Chrome द्वारे समर्थित, अॅप्स साठी वेब सामग्री"</string>
+    <string name="webviewgoogle_play_store_description" msgid="3054088773113944489">"Android Webview हा Chrome द्वारे समर्थित एक प्रणाली घटक आहे जो Android अॅप्सना वेब सामग्री प्रदर्शित करण्यासाठी अनुमती देतो. हा घटक आपल्या डिव्हाइसवर पूर्व-स्थापित केलेला आहे आणि आपल्याकडे नवीनतम सुरक्षितता अद्यतने आणि इतर दोष निराकरणे असल्याचे सुनिश्चित करण्यासाठी अद्ययावत ठेवला जावा."</string>
+</resources>

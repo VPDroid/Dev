@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  Copyright (c) 2014 The Chromium Authors. All rights reserved.
+
+     Use of this source code is governed by a BSD-style license that can be
+     found in the LICENSE file.
+ -->
+
+<resources xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="webviewgoogle_play_store_title" msgid="6227907912304696478">"Android ಸಿಸ್ಟಂ ವೆಬ್‌ವೀಕ್ಷಣೆ"</string>
+    <string name="webviewgoogle_play_store_tagline" msgid="825305078705915422">"Chrome ಸಂಚಾಲಿತ, ಅಪ್ಲಿಕೇಶನ್‌ಗಳಿಗಾಗಿ ವೆಬ್ ವಿಷಯ"</string>
+    <string name="webviewgoogle_play_store_description" msgid="3054088773113944489">"Android ವೆಬ್‌ವೀಕ್ಷಣೆಯು Android ಅಪ್ಲಿಕೇಶನ್‌ಗಳಿಗೆ ವೆಬ್ ವಿಷಯವನ್ನು ಪ್ರದರ್ಶೀಸಲು ಅನುಮತಿಸುವ Chrome ನಿಂದ ಸಂಚಾಲಿತವಾಗಿರುವ ಸಿಸ್ಟಂನ ಅಂಶವಾಗಿದೆ. ಈ ಅಂಶವನ್ನು ನಿಮ್ಮ ಸಾಧನದಲ್ಲಿ ಮೊದಲೇ ಸ್ಥಾಪಿಸಲಾಗಿದ್ದು ಮತ್ತು ನೀವು ಇತ್ತೀಚಿನ ಭದ್ರತೆ ನವೀಕರಣಗಳು ಹಾಗೂ ಇತರೆ ದೋಷ ಪರಿಹಾರಗಳನ್ನು ಹೊಂದಿರುವಿರಿ ಎಂಬುದನ್ನು ಖಚಿತಪಡಿಸಲು ನವಿಕೃತವಾಗಿರಿಸಬೇಕಾಗಿದೆ."</string>
+</resources>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  Copyright (c) 2014 The Chromium Authors. All rights reserved.
+
+     Use of this source code is governed by a BSD-style license that can be
+     found in the LICENSE file.
+ -->
+
+<resources xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="webviewgoogle_play_store_title" msgid="6227907912304696478">"Android စနစ် ဝက်ဘ်မြင်ကွင်း"</string>
+    <string name="webviewgoogle_play_store_tagline" msgid="825305078705915422">"Chrome မှ မောင်းနှင်ပေးသည့် ဝက်ဘ် အကြောင်းအရာများ"</string>
+    <string name="webviewgoogle_play_store_description" msgid="3054088773113944489">"အန်ဒရွိုက် ၀ကဘ်မြင်ကွင်းမှာ Chrome မှ မောင်းနှင်သည့် စနစ် အစိတ်အပိုင်း တစ်ခုဖြစ်ပြီး အန်ဒရွိုက်အား ဝက်ဘ် အကြောင်းအရာများကို ပြခွင့်ပြုသည်။ ထိုအပိုင်းကို သင်၏ ကိရိယာ ထဲမှာ ကြိုတပ်ဆင်ထားပြီ ဖြစ်ကာ သင့်ဆီမှာ နောက်ဆုံး လုံခြုံရေး မွမ်းမံမှုများ နှင့် အခြားသော ဘာဂ် ပြပြင်မှုများ ရှိနေတာကို စစ်ကြည့်ရန် လိုပါသည်။"</string>
+</resources>

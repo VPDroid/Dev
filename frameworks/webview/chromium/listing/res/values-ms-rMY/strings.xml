@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  Copyright (c) 2014 The Chromium Authors. All rights reserved.
+
+     Use of this source code is governed by a BSD-style license that can be
+     found in the LICENSE file.
+ -->
+
+<resources xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="webviewgoogle_play_store_title" msgid="6227907912304696478">"WebView Sistem Android"</string>
+    <string name="webviewgoogle_play_store_tagline" msgid="825305078705915422">"Kandungan web untuk apl, dikuasakan oleh Chrome"</string>
+    <string name="webviewgoogle_play_store_description" msgid="3054088773113944489">"Webview Android ialah satu komponen sistem yang dikuasakan oleh Chrome dan membenarkan apl Android memaparkan kandungan web. Komponen ini siap terpasang pada peranti anda dan hendaklah sentiasa terkini untuk memastikan anda mempunyai kemas kini keselamatan dan pembetulan pepijat lain yang terbaharu."</string>
+</resources>
