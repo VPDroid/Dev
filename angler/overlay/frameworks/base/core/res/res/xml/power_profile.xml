@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+**
+** Copyright 2015, The Android Open Source Project
+**
+** Licensed under the Apache License, Version 2.0 (the "License")
+** you may not use this file except in compliance with the License.
+** You may obtain a copy of the License at
+**
+**     http://www.apache.org/licenses/LICENSE-2.0
+**
+** Unless required by applicable law or agreed to in writing, software
+** distributed under the License is distributed on an "AS IS" BASIS,
+** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+** See the License for the specific language governing permissions and
+** limitations under the License.
+*/
+-->
+<device name="Android">
+    <!-- All values are in mAh except as noted -->
+    <item name="none">0</item>
+    <item name="screen.on">79.5</item>
+    <item name="screen.full">205.0</item>
+    <item name="bluetooth.active">25.2</item>
+    <item name="bluetooth.on">1.7</item>
+    <item name="wifi.on">2.7</item>
+    <item name="wifi.active">82.0</item>
+    <item name="wifi.scan">60.6</item>
+    <item name="dsp.audio">26.5</item>
+    <item name="dsp.video">242.0</item>
+    <item name="gps.on">35.33</item>
+    <item name="radio.active">183.1</item>
+    <!-- The current consumed by the radio when it is scanning for a signal -->
+    <item name="radio.scanning">77.0</item>
+    <!-- Current consumed by the radio at different signal strengths, when paging -->
+    <array name="radio.on"> <!-- Strength 0 to BINS-1 -->
+        <value>1.41</value>
+        <value>1.41</value>
+    </array>
+
+    <!-- Different CPU speeds as reported in
+         /sys/devices/system/cpu/cpu0/cpufreq/stats/time_in_state -->
+    <array name="cpu.speeds.cluster0">
+        <value>384000</value> <!-- 384 MHz CPU speed -->
+        <value>460800</value> <!-- 460.8 MHz CPU speed -->
+        <value>600000</value> <!-- 600 MHz CPU speed -->
+        <value>672000</value> <!-- 672 MHz CPU speed -->
+        <value>768000</value> <!-- 768 MHz CPU speed -->
+        <value>864000</value> <!-- 864 MHz CPU speed -->
+        <value>960000</value> <!-- 960 MHz CPU speed -->
+        <value>1248000</value> <!-- 1248 MHz CPU speed -->
+        <value>1344000</value> <!-- 1344 MHz CPU speed -->
+        <value>1478400</value> <!-- 1478.4 MHz CPU speed -->
+        <value>1555200</value> <!-- 1555.2 MHz CPU speed -->
+    </array>
+    <array name="cpu.speeds.cluster1">
+        <value>384000</value> <!-- 384 MHz CPU speed -->
+        <value>480000</value> <!-- 480 MHz CPU speed -->
+        <value>633600</value> <!-- 633.6 MHz CPU speed -->
+        <value>768000</value> <!-- 768 MHz CPU speed -->
+        <value>864000</value> <!-- 864 MHz CPU speed -->
+        <value>960000</value> <!-- 960 MHz CPU speed -->
+        <value>1248000</value> <!-- 1248 MHz CPU speed -->
+        <value>1344000</value> <!-- 1344 MHz CPU speed -->
+        <value>1440000</value> <!-- 1440 MHz CPU speed -->
+        <value>1536000</value> <!-- 1536 MHz CPU speed -->
+        <value>1632000</value> <!-- 1632 MHz CPU speed -->
+        <value>1728000</value> <!-- 1728 MHz CPU speed -->
+        <value>1824000</value> <!-- 1824 MHz CPU speed -->
+        <value>1958400</value> <!-- 1958.4 MHz CPU speed -->
+    </array>
+    <!-- Power consumption when CPU is idle -->
+    <item name="cpu.idle">5.58</item>
+    <item name="cpu.awake">4.92</item>
+    <!-- Power consumption at different speeds -->
+    <array name="cpu.active.cluster0">
+        <value>24.14</value> <!-- 384 MHz CPU speed -->
+        <value>27.2</value> <!-- 460.8 MHz CPU speed -->
+        <value>32.3</value> <!-- 600 MHz CPU speed -->
+        <value>36.94</value> <!-- 672 MHz CPU speed -->
+        <value>41.57</value> <!-- 768 MHz CPU speed -->
+        <value>49.87</value> <!-- 864 MHz CPU speed -->
+        <value>57.84</value> <!-- 960 MHz CPU speed -->
+        <value>79.8</value> <!-- 1248 MHz CPU speed -->
+        <value>88.81</value> <!-- 1344 MHz CPU speed -->
+        <value>102.4</value> <!-- 1478.4 MHz CPU speed -->
+        <value>110.9</value> <!-- 1555.2 MHz CPU speed -->
+    </array>
+    <array name="cpu.active.cluster1">
+        <value>86.83</value> <!-- 384 MHz CPU speed -->
+        <value>103.24</value> <!-- 480 MHz CPU speed -->
+        <value>129.38</value> <!-- 633.6 MHz CPU speed -->
+        <value>155.42</value> <!-- 768 MHz CPU speed -->
+        <value>177.99</value> <!-- 864 MHz CPU speed -->
+        <value>195.55</value> <!-- 960 MHz CPU speed -->
+        <value>265.09</value> <!-- 1248 MHz CPU speed -->
+        <value>292.77</value> <!-- 1344 MHz CPU speed -->
+        <value>322.13</value> <!-- 1440 MHz CPU speed -->
+        <value>348.19</value> <!-- 1536 MHz CPU speed -->
+        <value>370.18</value> <!-- 1632 MHz CPU speed -->
+        <value>405.51</value> <!-- 1728 MHz CPU speed -->
+        <value>437.84</value> <!-- 1824 MHz CPU speed -->
+        <value>481.07</value> <!-- 1958.4 MHz CPU speed -->
+    </array>
+    <array name="cpu.clusters.cores">
+        <value>4</value> <!-- Cluster 0 has 4 cores (cpu0, cpu1, cpu2, cpu3) -->
+        <value>4</value> <!-- Cluster 1 has 4 cores (cpu4, cpu5, cpu6, cpu7) -->
+    </array>
+    <!-- This is the battery capacity in mAh -->
+    <item name="battery.capacity">3450</item>
+
+    <array name="wifi.batchedscan"> <!-- mA.  Current figures based on .0801 s/c and 75.48mA while scanning -->
+        <value>.0003</value> <!-- 1-8/hr -->
+        <value>.003</value>  <!-- 9-64/hr -->
+        <value>.03</value>   <!-- 65-512/hr -->
+        <value>.3</value>    <!-- 513-4,096/hr -->
+        <value>3</value>    <!-- 4097-/hr -->
+    </array>
+</device>
