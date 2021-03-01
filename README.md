@@ -47,9 +47,9 @@ We have created the VPDroid code as follows, which are based on the Android Open
 
   switchsystem/: switch applications
 
-  Kernel_Kmsg/: Linux kernel message deamon
+  Kernel_Kmsg/: Linux kernel message daemons
 
-  logcat/: logcat message deamon
+  logcat/: logcat message daemons
 
 ### angler
   angler/: 6p angler device config files (host & VP rc files)
